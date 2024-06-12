@@ -149,7 +149,10 @@ const HeroSection = () => {
             scrollToSection("about");
           }}
         >
-          <HiArrowDown size={35} className="animate-bounce slow-bounce" />
+          <HiArrowDown
+            size={35}
+            className="animate-bounce slow-bounce cursor-pointer"
+          />
         </div>
       </div>
     </section>
