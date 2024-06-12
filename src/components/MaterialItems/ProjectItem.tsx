@@ -58,6 +58,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
                 transform md:hover:scale-105 
                 shadow-xl md:hover:shadow-2xl
                 transition-all duration-500 ease-in-out
+                
                 "
           >
             <Link href={`${basePath}/${projectKey}`}>
@@ -73,6 +74,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
                       rounded-xl 
                       cursor-pointer
                       object-cover
+                      border-gray-500 dark:border-gray-500 border-4
                     "
                 />
               </AspectRatio>

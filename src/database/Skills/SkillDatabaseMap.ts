@@ -92,9 +92,10 @@ const skillDatabaseMap: Database<SkillInterface> = {
 
   [SkillDatabaseKeys.Scala]: {
     name: "Scala",
-    isMainSkill: false,
+    isMainSkill: true,
     skillType: SkillTypesEnum.Technology,
     category: SkillCategoriesEnum.ProgrammingLanguages,
+    relatedSkills: [SkillDatabaseKeys.DataEngineering],
   },
 
   //^ Full Stack Web Development
@@ -1101,16 +1102,17 @@ const skillDatabaseMap: Database<SkillInterface> = {
     ],
   },
   [SkillDatabaseKeys.DataEngineering]: {
-    name: "Data Science",
-    category: SkillCategoriesEnum.ArtificialIntelligence,
-    isMainSkill: false,
-    skillType: SkillTypesEnum.Technical,
+    name: "Data Engineering",
+    category: SkillCategoriesEnum.DataEngineering,
+    isMainSkill: true,
+    skillType: SkillTypesEnum.Technology,
     relatedSkills: [
       SkillDatabaseKeys.Pandas,
       SkillDatabaseKeys.NumPy,
       SkillDatabaseKeys.Matplotlib,
       SkillDatabaseKeys.Seaborn,
       SkillDatabaseKeys.Jupyter,
+      SkillDatabaseKeys.Scala,
     ],
   },
 
