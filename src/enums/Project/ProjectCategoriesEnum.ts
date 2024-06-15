@@ -5,6 +5,7 @@
 enum ProjectCategoriesEnum {
   FullStackWebDevelopment = "Full-Stack Web Development",
   BackEndWebDevelopment = "Back-End Web Development",
+  FrontEndWebDevelopment = "Front-End Web Development",
   Other = "Other",
 }
 

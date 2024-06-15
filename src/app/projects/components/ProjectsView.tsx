@@ -176,8 +176,8 @@ const ProjectsView: React.FC = () => {
       sectionName: "Section",
       urlParam: sectionParamName,
       selectedValue: selectedSection,
-      options: [],
-      // generateFilterOptionsByCategory<ProjectInterface>(projectDatabaseMap),
+      options:
+        generateFilterOptionsByCategory<ProjectInterface>(projectDatabaseMap),
     },
     {
       sectionName: "Programming Language",

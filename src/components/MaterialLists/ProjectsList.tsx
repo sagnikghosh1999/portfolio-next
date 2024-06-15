@@ -24,7 +24,7 @@ const ProjectsList: React.FC<MaterialListProps> = ({
                 <div className="flex flex-col space-y-6">
                   {groupedProjects.length > 1 && (
                     <>
-                      <div className="border-b border-gray-200 dark:border-neutral-600 pb-1" />
+                      <div className="border-b border-gray-200 dark:border-neutral-600 mt-6 pb-1" />
                       <HeadingTwo title={group.groupName} />
                     </>
                   )}

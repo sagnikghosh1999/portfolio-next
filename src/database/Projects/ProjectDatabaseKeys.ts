@@ -8,6 +8,7 @@
  */
 enum ProjectDatabaseKeys {
   TeslaClone = "tesla-clone",
+  TravelWebsite = "travel-website",
 }
 
 export default ProjectDatabaseKeys;

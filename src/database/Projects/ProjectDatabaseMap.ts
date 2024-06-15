@@ -52,6 +52,44 @@ const projectMap: Database<ProjectInterface> = {
       // ModuleDatabaseKeys.NSEC_Chemistry
     ],
   },
+  [ProjectDatabaseKeys.TravelWebsite]: {
+    name: `Travel website landing page`,
+    description: `
+          This is a basic landing page of some Travel website built with NextJS, ReactJs and TailwindCss
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/tesla-clone`,
+    deploymentURL: `https://tesla-clone-1999.vercel.app/`,
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.NextJS,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.NPM,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.StakeholderManagement,
+      SkillDatabaseKeys.Communication,
+      SkillDatabaseKeys.RiskManagement,
+      SkillDatabaseKeys.DesignPatterns,
+    ],
+    category: ProjectCategoriesEnum.FrontEndWebDevelopment,
+    archived: false,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.TravelWebsite),
+    relatedMaterials: [
+      // ModuleDatabaseKeys.NSEC_Chemistry
+    ],
+  },
 };
 
 /**
