@@ -92,7 +92,7 @@ const skillDatabaseMap: Database<SkillInterface> = {
 
   [SkillDatabaseKeys.Scala]: {
     name: "Scala",
-    isMainSkill: true,
+    isMainSkill: false,
     skillType: SkillTypesEnum.Technology,
     category: SkillCategoriesEnum.ProgrammingLanguages,
     relatedSkills: [SkillDatabaseKeys.DataEngineering],

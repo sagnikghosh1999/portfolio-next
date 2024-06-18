@@ -28,7 +28,6 @@ const LanguageSection: React.FC = () => {
     SkillDatabaseKeys.JavaScript,
     SkillDatabaseKeys.TypeScript,
     SkillDatabaseKeys.Java,
-    SkillDatabaseKeys.Scala,
   ];
 
   return (

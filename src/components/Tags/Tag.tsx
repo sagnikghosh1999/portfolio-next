@@ -19,7 +19,7 @@ interface TagProps {
 const Tag: React.FC<TagProps> = ({ children, onClick, hasHover }) => {
   const baseClassName: string = `
     group
-    bg-gray-200 dark:bg-blue-700
+    bg-gray-200 dark:bg-blue-900
     px-4 py-2 mr-2 mt-2 rounded-lg
     text-gray-500 dark:text-gray-300 font-semibold
     transition-all duration-700 ease-in-out
