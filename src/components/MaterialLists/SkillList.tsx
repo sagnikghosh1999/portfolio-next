@@ -13,6 +13,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from "@/components/shadcn/ui/command";
 import {
   DropdownMenu,
@@ -178,7 +179,7 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
           <div className="flex flex-row gap-3 text-right text-neutral-700 dark:text-neutral-300 w-full">
             <p className="mt-3 w-auto md:w-2/5 whitespace-nowrap">Group by:</p>
             <DropdownMenu>
-              <DropdownMenuTrigger className="w-full">
+              <DropdownMenuTrigger asChild className="w-full">
                 <Button variant="default" className="w-full">
                   <div className="flex items-start justify-between space-x-2 w-full">
                     <span>{currentGroupName}</span>
@@ -227,57 +228,59 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
             <PopoverContent className="w-[24rem] md:w-[20rem] p-0">
               <Command className="w-full border-1 border-neutral-200 dark:border-neutral-950">
                 <CommandInput placeholder="Search Filter..." />
-                <CommandEmpty>No Filter Found.</CommandEmpty>
+                <CommandList className="w-full">
+                  <CommandEmpty>No Filter Found.</CommandEmpty>
 
-                <CommandGroup className="w-full">
-                  {filterParams?.map((filter, i) => (
-                    <Link
-                      key={i}
-                      href={generateUrl(
-                        [
-                          // Include the current state of all filters
-                          { entryName: groupParamName, slug: selectedGroup },
-                          {
-                            entryName: hardSkillParamName,
-                            slug: includeHardSkills ? "true" : "false",
-                          },
-                          {
-                            entryName: generalSkillParamName,
-                            slug: includeGeneralSkills ? "true" : "false",
-                          },
-                          {
-                            entryName: softSkillParamName,
-                            slug: includeSoftSkills ? "true" : "false",
-                          },
-                          {
-                            entryName: noMaterialParamName,
-                            slug: includeNoMaterial ? "true" : "false",
-                          },
-                          // Toggle current filter
-                          {
-                            entryName: filter.urlParamName,
-                            slug: filter.selected ? "false" : "true",
-                          },
-                        ],
-                        basePath
-                      )}
-                      className="w-full"
-                    >
-                      <CommandItem
-                        key={filter?.urlParamName}
-                        value={filter?.urlParamName}
+                  <CommandGroup className="w-full">
+                    {filterParams?.map((filter, i) => (
+                      <Link
+                        key={i}
+                        href={generateUrl(
+                          [
+                            // Include the current state of all filters
+                            { entryName: groupParamName, slug: selectedGroup },
+                            {
+                              entryName: hardSkillParamName,
+                              slug: includeHardSkills ? "true" : "false",
+                            },
+                            {
+                              entryName: generalSkillParamName,
+                              slug: includeGeneralSkills ? "true" : "false",
+                            },
+                            {
+                              entryName: softSkillParamName,
+                              slug: includeSoftSkills ? "true" : "false",
+                            },
+                            {
+                              entryName: noMaterialParamName,
+                              slug: includeNoMaterial ? "true" : "false",
+                            },
+                            // Toggle current filter
+                            {
+                              entryName: filter.urlParamName,
+                              slug: filter.selected ? "false" : "true",
+                            },
+                          ],
+                          basePath
+                        )}
                         className="w-full"
                       >
-                        {!filter.selected ? (
-                          <Check className={cn(gap, "text-blue-500")} />
-                        ) : (
-                          <div className={gap}></div>
-                        )}
-                        {filter.entryName}
-                      </CommandItem>
-                    </Link>
-                  ))}
-                </CommandGroup>
+                        <CommandItem
+                          key={filter?.urlParamName}
+                          value={filter?.urlParamName}
+                          className="w-full"
+                        >
+                          {!filter?.selected ? (
+                            <Check className={cn(gap, "text-blue-500")} />
+                          ) : (
+                            <div className={gap}></div>
+                          )}
+                          {filter?.entryName}
+                        </CommandItem>
+                      </Link>
+                    ))}
+                  </CommandGroup>
+                </CommandList>
               </Command>
             </PopoverContent>
           </Popover>

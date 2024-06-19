@@ -16,7 +16,7 @@ import skillDatabaseMap from "../Skills/SkillDatabaseMap";
 const certificateMap: Database<CertificateInterface> = {
   //^ Programming Languages
   [CertificateDatabaseKeys.UdemyRelationalDatabaseDesign]: {
-    name: "Python Programming Masterclass",
+    name: "Relational Database Design",
     category: CertificateCategoriesEnum.ProgrammingLanguages,
     issuer: CertificateIssuersEnum.Udemy,
     certificateURL:

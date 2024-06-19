@@ -7,6 +7,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from "@/components/shadcn/ui/command";
 import {
   Popover,
@@ -106,54 +107,56 @@ const FilterPopover: React.FC<FilterPopover> = ({
       <PopoverContent className="w-[24rem] md:w-[21rem] p-0">
         <Command className="w-full">
           <CommandInput placeholder="Search Filter..." />
-          <CommandEmpty>No Filter Found.</CommandEmpty>
+          <CommandList className="w-full">
+            <CommandEmpty>No Filter Found.</CommandEmpty>
 
-          <CommandGroup className="w-full max-h-[25vh]">
-            {selectedFilterCategory.options.map((option, i) => (
-              <Link
-                key={i}
-                href={generateUrl(
-                  [
-                    ...filterCategories.map((category) => ({
-                      // Existing filters
-                      entryName: category.urlParam,
-                      slug: category.selectedValue,
-                    })),
-                    {
-                      // Include the current search term dynamically
-                      entryName: searchFilter.searchParamName,
-                      slug: searchFilter.searchTerm,
-                    },
-                    {
-                      // Always show archived material when a filter is selected
-                      entryName: archiveFilter.paramName,
-                      slug: true.toString(),
-                    },
-                    {
-                      // New filter being applied
-                      entryName: selectedFilterCategory.urlParam,
-                      slug: option.slug,
-                    },
-                  ],
-                  basePath
-                )}
-                className="w-full"
-              >
-                <CommandItem
-                  key={option.slug}
-                  value={option.slug}
-                  className="pr-4 w-full"
-                >
-                  {selectedFilterCategory.selectedValue === option.slug ? (
-                    <Check className={cn(gap, "text-blue-500")} />
-                  ) : (
-                    <div className={gap}></div>
+            <CommandGroup className="w-full max-h-[25vh]">
+              {selectedFilterCategory.options.map((option, i) => (
+                <Link
+                  key={i}
+                  href={generateUrl(
+                    [
+                      ...filterCategories.map((category) => ({
+                        // Existing filters
+                        entryName: category.urlParam,
+                        slug: category.selectedValue,
+                      })),
+                      {
+                        // Include the current search term dynamically
+                        entryName: searchFilter.searchParamName,
+                        slug: searchFilter.searchTerm,
+                      },
+                      {
+                        // Always show archived material when a filter is selected
+                        entryName: archiveFilter.paramName,
+                        slug: true.toString(),
+                      },
+                      {
+                        // New filter being applied
+                        entryName: selectedFilterCategory.urlParam,
+                        slug: option.slug,
+                      },
+                    ],
+                    basePath
                   )}
-                  {option.entryName}
-                </CommandItem>
-              </Link>
-            ))}
-          </CommandGroup>
+                  className="w-full"
+                >
+                  <CommandItem
+                    key={option.slug}
+                    value={option.slug}
+                    className="pr-4 w-full"
+                  >
+                    {selectedFilterCategory.selectedValue === option.slug ? (
+                      <Check className={cn(gap, "text-blue-500")} />
+                    ) : (
+                      <div className={gap}></div>
+                    )}
+                    {option.entryName}
+                  </CommandItem>
+                </Link>
+              ))}
+            </CommandGroup>
+          </CommandList>
         </Command>
       </PopoverContent>
     </Popover>
