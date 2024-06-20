@@ -124,10 +124,10 @@ const FilterSection: React.FC<FilterSectionProps> = ({
         <AccordionItem
           value="item-1"
           className="
-            py-1 px-3 mt-3
+            py-1 px-3 my-4
             rounded-xl
             border
-            border-neutral-200 dark:border-neutral-800
+            md:border-neutral-200 md:dark:border-neutral-800
             hover:border-neutral-300 dark:hover:border-neutral-700
             bg-neutral-50 dark:bg-black
             shadow-sm hover:shadow-md

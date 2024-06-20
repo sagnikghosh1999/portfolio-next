@@ -4,6 +4,15 @@ import { NAVBAR_HEIGHT } from "@/constants/navbar";
 import { Providers } from "@/providers/Providers";
 import "./globals.css";
 
+//👇 Import Montserrat font
+import { Montserrat } from "next/font/google";
+
+//👇 Configure our font object
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 /**
  * Layout component which applies to all pages.
  * Contains:
@@ -21,7 +30,7 @@ export default function RootLayoutWithProviders({
 }) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className={montserrat.className}>
         <body>
           <Providers>
             <Navbar />

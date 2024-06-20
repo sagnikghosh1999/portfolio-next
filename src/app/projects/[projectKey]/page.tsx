@@ -350,11 +350,16 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             </div>
           </div>
 
+          {/* Divider */}
+          {!(!features || !!blog) ||
+            (projectData.relatedMaterials &&
+              projectData.relatedMaterials.length > 0 && (
+                <div className="pt-2 pb-3 border-b border-gray-200 dark:border-neutral-600" />
+              ))}
+
+          {/* Features Section */}
           <div>
-            <ProjectReader
-              content={{ features, blog }}
-              projectName={projectData.name}
-            />
+            <ProjectReader content={{ features, blog }} />
           </div>
 
           {/* Related Materials Section */}

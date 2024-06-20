@@ -1,16 +1,14 @@
 import CertificateDatabaseKeys from "@/database/Certificates/CertificateDatabaseKeys";
-import ProjectDatabaseKeys from "@/database/Projects/ProjectDatabaseKeys";
 import RoleDatabaseKeys from "@/database/Roles/RoleDatabaseKeys";
 import SkillDatabaseKeys from "@/database/Skills/SkillDatabaseKeys";
 import ExperienceCategoriesEnum from "@/enums/Experience/ExperienceCategoriesEnum";
 import ExperienceTypeEnum from "@/enums/Experience/ExperienceTypeEnum";
 import RoleInterface from "@/database/Roles/RoleInterface";
 import CompanyDatabaseKeys from "../Companies/CompanyDatabaseKeys";
-import { skillDatabaseKeys } from "../Skills/SkillDatabaseMap";
 
 const rolesMap: Database<RoleInterface> = {
   [RoleDatabaseKeys.ProgrammerAnalyst]: {
-    name: "Azure Data Engineer",
+    name: "Data Engineer, Programmer Analyst",
     category: ExperienceCategoriesEnum.Software,
     type: ExperienceTypeEnum.Professional,
     skills: [
@@ -47,7 +45,7 @@ const rolesMap: Database<RoleInterface> = {
     company: CompanyDatabaseKeys.Cognizant,
   },
   [RoleDatabaseKeys.ProgrammerAnalystTrainee]: {
-    name: "Programmer Analyst Trainee, Cognizant",
+    name: "Programmer Analyst Trainee",
     category: ExperienceCategoriesEnum.Software,
     type: ExperienceTypeEnum.Professional,
     company: CompanyDatabaseKeys.Cognizant,

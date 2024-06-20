@@ -28,13 +28,13 @@ export default function Home() {
   return (
     <main>
       {/* SEO data */}
-      {/* <div className="lg:w-full  sr-only">
+      <div className="sr-only">
         <p>{`My name is ${developerName} and I am a `}</p>
         {subtitles.map((subtitle, index) => (
           <p key={index}>{subtitle}</p>
         ))}
         <Reader content={aboutContent} size="lg:prose-lg" />
-      </div> */}
+      </div>
       <div className="flex flex-col max-w-6xl mx-auto space-y-20 md:space-y-36">
         <HeroSection />
         <AboutSection />

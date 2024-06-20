@@ -131,7 +131,7 @@ const FilterOverlay: React.FC<FilterOverlayProps> = ({
               className="
                 h-7 w-7 
                 text-neutral-800 dark:text-neutral-400 
-                hover:text-red-500 dark:hover:text-red-500 
+                hover:text-blue-500 dark:hover:text-blue-500 
                 transition-colors duration-500 ease-in-out"
               aria-hidden="true"
             />

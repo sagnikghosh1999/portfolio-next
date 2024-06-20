@@ -38,7 +38,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ roleKey }) => {
     <div
       className="
         flex flex-col md:flex-row 
-        p-4 space-x-0 md:space-x-8 space-y-2 md:space-y-0
+        p-4 md:p-6 space-x-0 md:space-x-8 space-y-2 md:space-y-0
         bg-neutral-100 dark:bg-neutral-950 rounded-xl
         transition-all duration-500 ease-in-out
         border border-neutral-200 dark:border-neutral-800
@@ -97,7 +97,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ roleKey }) => {
           <h2
             className="               
               text-3xl md:text-3xl font-bold  
-              md:hover:text-red-500 md:dark:hover:text-red-800
+              md:hover:text-blue-800 
               transition-colors duration-700 ease-in-out"
           >
             {roleData.name}
@@ -120,7 +120,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ roleKey }) => {
               className="
                 font-bold
                 hover:underline 
-                hover:text-red-500 hover:dark:text-red-700
+                hover:text-blue-700 
                 transition-colors duration-300 ease-in-out"
             >
               {companyData.name}

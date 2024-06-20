@@ -6,7 +6,7 @@ import CompanyDatabaseKeys from "./CompanyDatabaseKeys";
 const companiesMap: Database<CompanyInterface> = {
   [CompanyDatabaseKeys.Cognizant]: {
     name: "Cognizant Technology Solutions",
-    location: "London, UK",
+    location: "Kolkata, India",
     website: "https://www.cognizant.com/",
     positions: [RoleDatabaseKeys.ProgrammerAnalyst],
     logo: addCompanyThumbnail(CompanyDatabaseKeys.Cognizant),
