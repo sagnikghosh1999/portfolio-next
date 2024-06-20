@@ -10,7 +10,7 @@ import { skillDatabaseKeys } from "../Skills/SkillDatabaseMap";
 
 const rolesMap: Database<RoleInterface> = {
   [RoleDatabaseKeys.ProgrammerAnalyst]: {
-    name: "DevOps Engineer",
+    name: "Azure Data Engineer",
     category: ExperienceCategoriesEnum.Software,
     type: ExperienceTypeEnum.Professional,
     skills: [

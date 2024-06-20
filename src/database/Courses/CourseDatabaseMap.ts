@@ -17,7 +17,7 @@ const courseMap: Database<CourseInterface> = {
     university: "Netaji Subhash Engineering College, Kolkata",
     grade: "9.43",
     category: "Bachelor of Technology",
-    skills: [],
+    skills: [], // dynamically added from modules
     startYear: 2017,
     endYear: 2021,
     modules: [
