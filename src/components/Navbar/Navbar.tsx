@@ -61,7 +61,7 @@ export default function Navbar() {
         style={{ transitionDuration }}
       >
         <div className="justify-between max-w-7xl md:items-center md:flex mx-auto ">
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className="flex items-center flex-1 justify-between py-3 md:py-5 md:block">
             <HomeButton />
 
             {/* Mobile Only */}
