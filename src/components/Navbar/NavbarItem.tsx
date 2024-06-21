@@ -62,7 +62,7 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ href, children }) => {
           bottom-[2px]    
           left-0 inline-block 
           bg-blue-800 dark:bg-blue-500 
-          -translate-x-[100%] md:group-hover:translate-x-0 transition-transform 
+          -translate-x-[110%] md:group-hover:translate-x-0 transition-transform 
           duration-300"
       />
     </Link>
