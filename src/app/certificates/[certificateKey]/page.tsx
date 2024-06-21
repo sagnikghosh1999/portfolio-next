@@ -175,7 +175,10 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
               bg-neutral-100 dark:bg-neutral-950  
 					"
             >
-              <AspectRatio ratio={4 / 3} className="overflow-hidden relative">
+              <AspectRatio
+                ratio={certificateData.issuer === "Microsoft" ? 1.9 : 4 / 3}
+                className="overflow-hidden relative"
+              >
                 <Image
                   src={certificateImage}
                   alt={`${certificateData.name} certificate image`}
