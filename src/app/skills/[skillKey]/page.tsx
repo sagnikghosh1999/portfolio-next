@@ -94,12 +94,12 @@ const SkillPage: React.FC<ProjectPageProps> = ({ params }) => {
         <h1>{skillData.name}</h1>
         <h2>Skills for certificate:</h2>
         {skillData.relatedSkills?.map((skill) => (
-          <p key={skill}>{skillDatabaseMap[skill].name}</p>
+          <p key={skill}>{skillDatabaseMap[skill]?.name}</p>
         ))}
       </div>
 
       <div className="">
-        <HeadingOne title={skillData.name} />
+        <HeadingOne title={skillData?.name} />
         <PageDescription
           description={`
           This is the page displaying all the material related to ${skillData.name}.
