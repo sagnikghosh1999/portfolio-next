@@ -12,7 +12,41 @@ import SkillCategoriesEnum from "@/enums/Skill/SkillCategoriesEnum";
  * The order of the blogs is the order that is used when displaying the blogs on the website.
  * The order of the skills is the order that is used when displaying the skills on the website.
  */
-const blogsMap: Database<BlogInterface> = {};
+const blogsMap: Database<BlogInterface> = {
+  [BlogDatabaseKeys.Frontend]: {
+    name: "Front-End Development and the Essential Role of Libraries and Frameworks",
+    subtitle:
+      "A comprehensive introduction to standard front-end web development using libraries and frameworks",
+    category: BlogCategoriesEnum.WebDevelopment,
+    skills: [
+      SkillDatabaseKeys.WebDevelopment,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.NextJS,
+    ],
+  },
+  [BlogDatabaseKeys.JavaScriptVsTypeScript]: {
+    name: "JavaScript vs TypeScript: A Detailed Comparison",
+    subtitle:
+      "Exploring the Advantages and Key Differences between JavaScript and TypeScript",
+    category: BlogCategoriesEnum.SoftwareEngineering,
+    skills: [SkillDatabaseKeys.JavaScript, SkillDatabaseKeys.TypeScript],
+  },
+  [BlogDatabaseKeys.RESTGraphQL]: {
+    name: "Comparing GraphQL and REST: A Detailed Overview",
+    subtitle: "Choosing the Right API Design Approach",
+    category: BlogCategoriesEnum.WebDevelopment,
+    skills: [
+      SkillDatabaseKeys.WebDevelopment,
+      SkillDatabaseKeys.APIs,
+      SkillDatabaseKeys.REST,
+
+      SkillDatabaseKeys.ProblemSolving,
+    ],
+  },
+};
 
 /**
  * List of keys for the blogs that can be used to uniquely identify the blogs.

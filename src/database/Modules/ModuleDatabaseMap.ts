@@ -20,7 +20,7 @@ const modulesMap: Database<ModuleInterface> = {
   [ModuleDatabaseKeys.NSEC_Physics1]: {
     name: "Engineering Physics 1",
     category: ModuleYearGroupsEnum.Year1,
-    skills: [],
+    skills: [SkillDatabaseKeys.ProblemSolving],
     relatedMaterials: [],
     learningOutcomes: [
       "Introducing basic to advanced concepts of Physics",
