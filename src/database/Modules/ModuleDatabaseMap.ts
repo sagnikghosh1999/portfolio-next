@@ -15,7 +15,7 @@ import CourseDatabaseKeys from "@/database/Courses/CourseDatabaseKeys";
  * The order of the modules is the order that will be used to display them.
  */
 const modulesMap: Database<ModuleInterface> = {
-  //^ Royal Holloway University of London
+  //^ Netaji Subhash Engineering College, Kolkata
   //* Year 1
   [ModuleDatabaseKeys.NSEC_Physics1]: {
     name: "Engineering Physics 1",
