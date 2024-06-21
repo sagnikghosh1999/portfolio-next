@@ -13,6 +13,9 @@ const rolesMap: Database<RoleInterface> = {
     type: ExperienceTypeEnum.Professional,
     skills: [
       SkillDatabaseKeys.Python,
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.HTML,
       SkillDatabaseKeys.Java,
       SkillDatabaseKeys.ObjectOrientedProgramming,
       SkillDatabaseKeys.REST,
