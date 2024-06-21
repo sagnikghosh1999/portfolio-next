@@ -38,7 +38,7 @@ const ProjectsSection = () => {
 
       <div className="flex justify-center mt-10">
         <Link href={basePath}>
-          <Button variant="outline">View All Projects</Button>
+          <Button variant="outline2">View All Projects</Button>
         </Link>
       </div>
     </section>
