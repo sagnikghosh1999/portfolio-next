@@ -21,9 +21,9 @@ const Tag: React.FC<TagProps> = ({ children, onClick, hasHover }) => {
     group
     bg-gray-200 dark:bg-blue-900
     px-4 py-2 mr-2 mt-2 rounded-lg
-    text-gray-500 dark:text-gray-300 font-semibold
+    text-gray-600 dark:text-gray-100 font-semibold
     transition-all duration-700 ease-in-out
-    border-2 border-gray-200 dark:border-blue-500
+    border-2 border-gray-200 dark:border-blue-800
     shadow-sm
   `;
 
