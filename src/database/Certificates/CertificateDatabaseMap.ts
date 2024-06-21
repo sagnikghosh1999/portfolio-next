@@ -22,10 +22,7 @@ const certificateMap: Database<CertificateInterface> = {
     certificateURL:
       "https://www.udemy.com/certificate/UC-ee0353de-bffd-4d1c-8a0a-115f9729193f/",
     skills: [
-      SkillDatabaseKeys.JavaScript,
-      SkillDatabaseKeys.ObjectOrientedProgramming,
-      SkillDatabaseKeys.Algorithms,
-      SkillDatabaseKeys.DataStructures,
+      SkillDatabaseKeys.DatabaseManagementSystems,
       SkillDatabaseKeys.ProblemSolving,
       SkillDatabaseKeys.CriticalThinking,
     ],

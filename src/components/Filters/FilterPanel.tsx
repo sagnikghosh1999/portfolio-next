@@ -124,7 +124,9 @@ const FilterOverlay: React.FC<FilterOverlayProps> = ({
           "
         >
           {/* Replace HeadingThree with your own heading component or HTML tag */}
-          <HeadingThree title="Filters" />
+          <div className="-mb-6">
+            <HeadingThree title="Filters" />
+          </div>{" "}
           <button onClick={toggle}>
             <span className="sr-only">Close</span>
             <IoClose

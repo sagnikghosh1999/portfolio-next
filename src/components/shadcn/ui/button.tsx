@@ -15,7 +15,7 @@ const buttonVariants = cva(
           bg-neutral-100 dark:bg-neutral-800
           md:hover:bg-neutral-100 dark:md:hover:bg-neutral-800
           border-2 border-transparent dark:border-transparent
-          md:hover:border-blue-800 dark:md:hover:border-blue-500
+          md:hover:border-blue-500 dark:md:hover:border-blue-800
           transition-all duration-500 ease-in-out
           border border-neutral-300 dark:border-neutral-700
           `,
