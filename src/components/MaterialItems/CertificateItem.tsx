@@ -71,7 +71,10 @@ const CertificateItem: React.FC<CertificateItemProps> = ({
               overflow-hidden
           "
           >
-            <AspectRatio ratio={4 / 3} className="overflow-hidden relative">
+            <AspectRatio
+              ratio={certificateData.issuer === "Microsoft" ? 1.9 : 4 / 3}
+              className="overflow-hidden relative"
+            >
               <Image
                 key={certificateKey}
                 src={certificateData.certificateImage}

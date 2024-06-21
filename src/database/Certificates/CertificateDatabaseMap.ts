@@ -14,6 +14,31 @@ import skillDatabaseMap from "../Skills/SkillDatabaseMap";
  * The order of the skills is the order that is used when displaying the skills on the website.
  */
 const certificateMap: Database<CertificateInterface> = {
+  //Cloud Computing
+  [CertificateDatabaseKeys.AzureDataFundamentals]: {
+    name: "Azure Data Fundamentals",
+    category: CertificateCategoriesEnum.CloudComputing,
+    issuer: CertificateIssuersEnum.Microsoft,
+    certificateURL:
+      "https://learn.microsoft.com/en-us/users/sagnikghosh-4678/credentials/884c294acfce5138",
+    skills: [
+      SkillDatabaseKeys.Azure_BlobStorage,
+      SkillDatabaseKeys.Azure_ResourceManager,
+      SkillDatabaseKeys.DataEngineering,
+      SkillDatabaseKeys.Azure,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      This certification is an opportunity to demonstrate ones' knowledge of core data concepts and related Microsoft Azure data services. As a candidate for this certification, one should have familiarity with Exam DP-900’s self-paced or instructor-led learning material. Azure Data Fundamentals is a stepping stone to prepare for other Azure role-based certifications like Azure Database Administrator Associate or Azure Data Engineer Associate`,
+    learningOutcomes: [
+      "Understand basics of Azure data services",
+      "Identify considerations for relational data on Azure",
+      "Describe considerations for working with non-relational data on Azure",
+      "Describe an analytics workload on Azure",
+      "Describe considerations for working with non-relational data on Azure",
+    ],
+  },
   //^ Programming Languages
   [CertificateDatabaseKeys.UdemyRelationalDatabaseDesign]: {
     name: "Relational Database Design",
