@@ -62,7 +62,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
                 "
           >
             <Link href={`${basePath}/${projectKey}`}>
-              <AspectRatio ratio={15 / 8} className="overflow-hidden relative">
+              <AspectRatio ratio={2} className="overflow-hidden relative">
                 <Image
                   src={projectData.thumbnailImage}
                   key={projectData.thumbnailImage}

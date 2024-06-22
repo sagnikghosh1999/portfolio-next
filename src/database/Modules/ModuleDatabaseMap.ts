@@ -28,17 +28,6 @@ const modulesMap: Database<ModuleInterface> = {
     ],
     parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
   },
-  [ModuleDatabaseKeys.NSEC_Physics2]: {
-    name: "Engineering Physics 2",
-    category: ModuleYearGroupsEnum.Year1,
-    skills: [],
-    relatedMaterials: [],
-    learningOutcomes: [
-      "Introducing basic to advanced concepts of Physics",
-      "Understanding the importance and role of physics in Engineering",
-    ],
-    parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
-  },
 };
 
 /**

@@ -11,7 +11,6 @@ enum SkillCategoriesEnum {
   DevOps = "DevOps",
   Testing = "Testing",
   ProjectManagers = "Project Managers",
-  ArtificialIntelligence = "Artificial Intelligence",
   DataEngineering = "Data Engineering",
   CloudComputing = "Cloud Computing",
   CommunicationProtocolsLibraries = "Communication Protocols & Libraries",

@@ -7,23 +7,24 @@
  */
 enum SkillDatabaseKeys {
   //^ Languages
-  Python = "python",
   JavaScript = "javascript",
   TypeScript = "typescript",
+  Python = "python",
+  SQL = "sql",
+  Scala = "scala",
   Java = "java",
   C = "c",
-  Scala = "scala",
   ObjectOrientedProgramming = "oop",
   FunctionalProgramming = "fp",
 
   //^ APIs
   REST = "rest-api",
-  // GraphQL = "graphql-api",
-  TRPC = "trpc-api",
-  // SocketIO = "socket-io",
   OpenAI = "open-ai",
-  ReplicateAI = "replicate-ai",
   APIs = "apis",
+  // GraphQL = "graphql-api",
+  // TRPC = "trpc-api",
+  // SocketIO = "socket-io",
+  // ReplicateAI = "replicate-ai",
   // SDKs = "sdks",
 
   //^ Backend Web Development
@@ -34,43 +35,42 @@ enum SkillDatabaseKeys {
   Stripe = "stripe",
   ExpressJS = "express-js",
   Cloudinary = "cloudinary",
-  WebSockets = "web-sockets",
   UserAuthentication = "user-authentication",
+  // WebSockets = "web-sockets",
 
   //^ Full Stack Web Development
   NextJS = "next-js",
 
   //^ Frontend Web Development
   ReactJS = "react",
-  Zustand = "zustand",
-  Redux = "redux",
-  TailwindCSS = "tailwind-css",
   HTML = "html",
   CSS = "css",
-  HeadlessUI = "headless-ui",
+  Redux = "redux",
+  TailwindCSS = "tailwind-css",
+  Bootstrap = "bootstrap",
   ShadcnUI = "shadcn-ui",
+  NextUI = "next-ui",
   RadixUI = "radix-ui",
   ReactQuery = "react-query",
-  NextUI = "next-ui",
-  Bootstrap = "bootstrap",
+  HeadlessUI = "headless-ui",
   MaterialUI = "material-ui",
   AntDesign = "ant-design",
-  SimpleGUI = "simple-gui",
   Axios = "axios",
   StateManagement = "state-management",
+  Zustand = "zustand",
 
   //^ Database
   PostgreSQL = "postgresql",
   MySQL = "mysql",
   SQLite = "sqlite",
   MongoDB = "mongodb",
-  // Redis = "redis",
-  Convex = "convex",
   Databases = "databases",
   RelationalDatabases = "relational-databases",
   NonRelationalDatabases = "non-relational-databases",
   DatabaseManagementSystems = "database-management-systems",
   DatabaseIndexing = "indexing",
+  // Convex = "convex",
+  // Redis = "redis",
 
   //^ Object-Relational Mappers
   Mongoose = "moongose",
@@ -79,14 +79,14 @@ enum SkillDatabaseKeys {
   // SQLAlchemy = "sqlalchemy",
 
   //^ DevOps
-  GitHubActions = "github-actions",
   GitLabCI = "gitlab-ci",
   Jenkins = "jenkins",
   ContinuousIntegration = "continuous-integration",
   ContinuousDeployment = "continuous-deployment",
   ContinuousDelivery = "continuous-delivery",
   InfrastructureAsCode = "infrastructure-as-code",
-  Automation = "automation",
+  // Automation = "automation",
+  // GitHubActions = "github-actions",
 
   //^ Version Control Systems
   Git = "git",
@@ -103,10 +103,10 @@ enum SkillDatabaseKeys {
 
   //^ Testing
   Jest = "jest",
-  UnitTest = "unittest",
-  JUnit = "junit",
   ReactTestingLibrary = "react-testing-library",
   Testing = "testing",
+  // UnitTest = "unittest",
+  // JUnit = "junit",
 
   //^ Project and Dependency Management
   NPM = "npm",
@@ -115,14 +115,16 @@ enum SkillDatabaseKeys {
   Pip = "pip",
   Bun = "bun",
 
-  //^ Artificial Intelligence, Machine Learning, and Data Science
+  //^ Data Engineering
   Pandas = "pandas",
   NumPy = "numpy",
-  Matplotlib = "matplotlib",
-  Seaborn = "seaborn",
   Jupyter = "jupyter",
-  ArtificialIntelligence = "artificial-intelligence",
   DataEngineering = "data-engineering",
+  DataIngestion = "data-ingestion",
+  DataFrame = "data-frame",
+  ApacheSpark = "apache-spark",
+  // Matplotlib = "matplotlib",
+  // Seaborn = "seaborn",
 
   //^ Mathematics
   Probability = "probability",
@@ -138,30 +140,17 @@ enum SkillDatabaseKeys {
   Mathematics = "mathematics",
 
   //^ Cloud Computing
-  AWS = "aws",
-  AWS_CloudWatch = "aws-cloudwatch",
-  AWS_ApplicationLoadBalancer = "aws-application-load-balancer",
-  AWS_ElasticCache = "aws-elastic-cache",
-  AWS_K3s = "aws-k3s",
-  AWS_EC2 = "aws-ec2",
-  AWS_S3 = "aws-s3",
-  AWS_VPC = "aws-vpc",
-  AWS_Lambda = "aws-lambda",
-  AWS_ElasticFileSystem = "aws-elastic-filesystem",
-  AWS_ElasticBlockStore = "aws-elastic-block-store",
-  AWS_RelationalDatabaseService = "aws-relational-database-service",
-  AWS_AutoScaling = "aws-auto-scaling",
-  AWS_CloudFormation = "aws-cloudformation",
-  AWS_CloudFront = "aws-cloudfront",
-  AWS_ElasticBeanstalk = "aws-elastic-beanstalk",
   Azure = "azure",
   Azure_AppService = "azure-app-service",
   Azure_Monitor = "azure-monitor",
   Azure_BlobStorage = "azure-blob-storage",
-  Azure_DurableFunctions = "azure-durable-functions",
+  Azure_Datalake = "azure-datalake",
   Azure_Functions = "azure-functions",
   Azure_ResourceManager = "azure-resource-manager",
-  Azure_ContainerRegistry = "azure-container-registry",
+  Azure_CosmosDB = "azure-cosmosdb",
+  Azure_SQLWarehouse = "azure-sql-warehouse",
+  Azure_DataFactory = "azure-data-factory",
+  Azure_Databricks = "azure-databricks",
 
   //^ Algorithms & Data Structures
   Algorithms = "algorithms",

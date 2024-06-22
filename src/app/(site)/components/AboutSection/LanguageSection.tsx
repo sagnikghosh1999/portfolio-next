@@ -24,10 +24,11 @@ const LanguageSection: React.FC = () => {
    * The list of main languages that will be displayed.
    */
   const mainLanguages: SkillDatabaseKeys[] = [
-    SkillDatabaseKeys.Python,
     SkillDatabaseKeys.JavaScript,
     SkillDatabaseKeys.TypeScript,
-    SkillDatabaseKeys.Java,
+    SkillDatabaseKeys.Python,
+    SkillDatabaseKeys.SQL,
+    SkillDatabaseKeys.Scala,
   ];
 
   return (
