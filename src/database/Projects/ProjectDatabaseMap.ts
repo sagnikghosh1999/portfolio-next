@@ -48,9 +48,47 @@ const projectMap: Database<ProjectInterface> = {
     ],
     category: ProjectCategoriesEnum.FullStackWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.TeslaClone),
-    relatedMaterials: [
-      // ModuleDatabaseKeys.NSEC_Chemistry
+    relatedMaterials: [],
+  },
+  [ProjectDatabaseKeys.AirbnbClone]: {
+    name: `Airbnb Clone`,
+    description: `
+          Full Stack Airbnb Clone with Next.js 14, Tailwind-css, Prisma, MongoDB, Framer-motion, Login (Google and Github), Image upload with Cloudinary
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/airbnb-trpc`,
+    deploymentURL: `https://nextbnb-three.vercel.app/`,
+    skills: [
+      SkillDatabaseKeys.TypeScript,
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.NextJS,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.TailwindCSS,
+      SkillDatabaseKeys.Cloudinary,
+      SkillDatabaseKeys.Zustand,
+      SkillDatabaseKeys.UserAuthentication,
+      SkillDatabaseKeys.NextAuth,
+      SkillDatabaseKeys.Axios,
+
+      SkillDatabaseKeys.Yarn,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.DesignPatterns,
     ],
+    category: ProjectCategoriesEnum.FullStackWebDevelopment,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.AirbnbClone),
+    relatedMaterials: [],
   },
   [ProjectDatabaseKeys.TravelWebsite]: {
     name: `Travel website landing page`,
