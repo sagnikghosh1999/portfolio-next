@@ -7,7 +7,6 @@ enum BlogCategoriesEnum {
   SoftwareEngineering = "Software Engineering",
   Databases = "Databases",
   DevOps = "DevOps",
-  ArtificialIntelligence = "Artificial Intelligence",
   Mathematics = "Mathematics",
   Other = "Other",
 }

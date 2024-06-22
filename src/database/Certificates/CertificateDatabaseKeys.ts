@@ -12,8 +12,6 @@ enum CertificateDatabaseKeys {
 
   //^ Algorithms and Data Structures
 
-  //^ Artificial Intelligence
-
   //^ Web Development
 
   //^ Databases

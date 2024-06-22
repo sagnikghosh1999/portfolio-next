@@ -6,7 +6,7 @@ enum CertificateCategoriesEnum {
   ProgrammingLanguages = "Programming Languages",
   WebDevelopment = "Web Development",
   DataEngineering = "Data Engineering",
-  ArtificialIntelligence = "Artificial Intelligence",
+
   CloudComputing = "Cloud Computing",
   Other = "Other",
 }

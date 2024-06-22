@@ -106,7 +106,7 @@ const TechnologiesSection: React.FC = () => {
   }
 
   function handleDisplaySkills(): SkillDatabaseKeys[] {
-    return firstNSkills(firstNSkillsPerCategory(skillsToDisplay, 3), 15);
+    return firstNSkills(firstNSkillsPerCategory(skillsToDisplay, 5), 18);
   }
 
   return (

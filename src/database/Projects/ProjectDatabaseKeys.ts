@@ -8,6 +8,7 @@
  */
 enum ProjectDatabaseKeys {
   TeslaClone = "tesla-clone",
+  AirbnbClone = "airbnb-clone",
   TravelWebsite = "travel-website",
 }
 

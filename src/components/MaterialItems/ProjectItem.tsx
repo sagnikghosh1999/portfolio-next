@@ -62,7 +62,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
                 "
           >
             <Link href={`${basePath}/${projectKey}`}>
-              <AspectRatio ratio={15 / 8} className="overflow-hidden relative">
+              <AspectRatio ratio={2} className="overflow-hidden relative">
                 <Image
                   src={projectData.thumbnailImage}
                   key={projectData.thumbnailImage}
@@ -74,7 +74,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
                       rounded-xl 
                       cursor-pointer
                       object-cover
-                      border-gray-500 dark:border-gray-500 border-4
                     "
                 />
               </AspectRatio>
@@ -83,7 +82,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
         )}
 
         <div
-          className={`mt-8 ${
+          className={`mt-6 ${
             projectData.thumbnailImage ? "lg:w-1/2" : "lg:w-full"
           }`}
         >
