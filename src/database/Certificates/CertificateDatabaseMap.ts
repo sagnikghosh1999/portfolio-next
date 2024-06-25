@@ -39,6 +39,27 @@ const certificateMap: Database<CertificateInterface> = {
       "Describe considerations for working with non-relational data on Azure",
     ],
   },
+  [CertificateDatabaseKeys.HackerrankJavascriptBasic]: {
+    name: "Hackerrank Javascript Basic",
+    category: CertificateCategoriesEnum.ProgrammingLanguages,
+    issuer: CertificateIssuersEnum.HackerRank,
+    certificateURL: "https://www.hackerrank.com/certificates/242ab0dcb035",
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.WebDevelopment,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      This certification is an opportunity to demonstrate ones' knowledge of core topics like, Functions, Currying, Hoisting, Scope, Inheritance, Events and Error Handling.`,
+    learningOutcomes: [
+      "Understand basics of Javascript",
+      "Understand the basics of functions and Error handling",
+      "Understand the concept of Hoisting",
+      "Understand the basics of Scopes",
+      "Understand the basics of object oriented programming",
+    ],
+  },
   //^ Programming Languages
   [CertificateDatabaseKeys.UdemyRelationalDatabaseDesign]: {
     name: "Relational Database Design",

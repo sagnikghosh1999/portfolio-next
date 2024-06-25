@@ -4,12 +4,10 @@
  * The order they are displayed in is the order they are listed here.
  */
 const subtitles: string[] = [
+  "Full-Stack Developer",
   "Frontend Developer",
   "Backend Developer",
-  "Full-Stack Developer",
-  "Data Engineering",
-  "Relational Databases",
-  "Mathematics",
+  "Data Engineer",
   "Mechanical Engineer",
 ];
 
