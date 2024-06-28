@@ -20,7 +20,7 @@ const TypeWriterTextLoop: React.FC<TypeWriterTextLoopProps> = ({
 }) => {
   return (
     <div>
-      <p className={className}>
+      <div className={className}>
         <TypewriterComponent
           options={{
             strings: loopItems,
@@ -28,7 +28,7 @@ const TypeWriterTextLoop: React.FC<TypeWriterTextLoopProps> = ({
             loop: true,
           }}
         />
-      </p>
+      </div>
     </div>
   );
 };

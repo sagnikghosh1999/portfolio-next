@@ -31,7 +31,7 @@ export default function Home() {
       <div className="sr-only">
         <p>{`My name is ${developerName} and I am a `}</p>
         {subtitles.map((subtitle, index) => (
-          <p key={index}>{subtitle}</p>
+          <span key={index}>{subtitle}</span>
         ))}
         <Reader content={aboutContent} size="lg:prose-lg" />
       </div>

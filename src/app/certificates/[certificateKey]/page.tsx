@@ -240,9 +240,11 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
               </div>
 
               <div>
-                <div className="md:text-left text-center">
-                  <HeadingThree title="Links" />
-                </div>
+                {certificateData.certificateURL && (
+                  <div className="md:text-left text-center">
+                    <HeadingThree title="Links" />
+                  </div>
+                )}
                 {/* Links */}
                 <div
                   className="
