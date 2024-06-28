@@ -132,17 +132,24 @@ const modulesMap: Database<ModuleInterface> = {
     ],
     parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
   },
-  // [ModuleDatabaseKeys.NSEC_Physics1]: {
-  //   name: "Engineering Physics 1",
-  //   category: ModuleYearGroupsEnum.Year1,
-  //   skills: [SkillDatabaseKeys.ProblemSolving],
-  //   relatedMaterials: [],
-  //   learningOutcomes: [
-  //     "Introducing basic to advanced concepts of Physics",
-  //     "Understanding the importance and role of physics in Engineering",
-  //   ],
-  //   parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
-  // },
+  [ModuleDatabaseKeys.NSEC_Mathematics2]: {
+    name: "Engineering Mathematics 2",
+    category: ModuleYearGroupsEnum.Year1sem2,
+    skills: [
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.Algebra,
+      SkillDatabaseKeys.Trigonometry,
+    ],
+    relatedMaterials: [],
+    learningOutcomes: [
+      "Master advanced calculus concepts, including multivariable calculus and partial differentiation.",
+      "Understand and apply the principles of complex numbers and their operations.",
+      "Analyze and solve ordinary differential equations and their applications.",
+      "Learn about vector calculus, including gradient, divergence, and curl.",
+      "Gain proficiency in using Laplace transforms and Fourier series for engineering problems.",
+    ],
+    parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
+  },
   // [ModuleDatabaseKeys.NSEC_Physics1]: {
   //   name: "Engineering Physics 1",
   //   category: ModuleYearGroupsEnum.Year1,

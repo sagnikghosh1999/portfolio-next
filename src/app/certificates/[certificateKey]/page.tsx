@@ -47,11 +47,11 @@ export async function generateMetadata(
   return {
     title: `${developerName} - Certificates: ${certificate?.name}`,
     description: certificate?.description,
-    category: `${CERTIFICATES_PAGE.label}`,
+    category: `${CERTIFICATES_PAGE?.label}`,
     creator: developerName,
     keywords: [
       certificate?.name,
-      ...certificate?.skills.map((skill) => skillDatabaseMap[skill].name),
+      ...certificate?.skills.map((skill) => skillDatabaseMap[skill]?.name),
     ],
   };
 }
