@@ -17,6 +17,7 @@ import CourseDatabaseKeys from "@/database/Courses/CourseDatabaseKeys";
 const modulesMap: Database<ModuleInterface> = {
   //^ Netaji Subhash Engineering College, Kolkata
   //* Year 1
+  // !st semester
   [ModuleDatabaseKeys.NSEC_Physics1]: {
     name: "Engineering Physics 1",
     category: ModuleYearGroupsEnum.Year1sem1,
@@ -150,28 +151,41 @@ const modulesMap: Database<ModuleInterface> = {
     ],
     parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
   },
-  // [ModuleDatabaseKeys.NSEC_Physics1]: {
-  //   name: "Engineering Physics 1",
-  //   category: ModuleYearGroupsEnum.Year1,
-  //   skills: [SkillDatabaseKeys.ProblemSolving],
-  //   relatedMaterials: [],
-  //   learningOutcomes: [
-  //     "Introducing basic to advanced concepts of Physics",
-  //     "Understanding the importance and role of physics in Engineering",
-  //   ],
-  //   parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
-  // },
-  // [ModuleDatabaseKeys.NSEC_Physics1]: {
-  //   name: "Engineering Physics 1",
-  //   category: ModuleYearGroupsEnum.Year1,
-  //   skills: [SkillDatabaseKeys.ProblemSolving],
-  //   relatedMaterials: [],
-  //   learningOutcomes: [
-  //     "Introducing basic to advanced concepts of Physics",
-  //     "Understanding the importance and role of physics in Engineering",
-  //   ],
-  //   parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
-  // },
+  [ModuleDatabaseKeys.NSEC_ThermodynamicsAndFluid]: {
+    name: "Engineering Thermodynamics and Fluid Mechanics",
+    category: ModuleYearGroupsEnum.Year1sem2,
+    skills: [
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Mechanics,
+    ],
+    relatedMaterials: [],
+    learningOutcomes: [
+      "Understand the basic principles and laws of thermodynamics.",
+      "Analyze and solve problems involving energy conversion and heat transfer.",
+      "Comprehend the behavior and properties of fluids in various states and flow conditions.",
+      "Apply the principles of fluid mechanics to design and analyze fluid systems.",
+      "Utilize thermodynamic cycles and fluid dynamics in engineering applications.",
+    ],
+    parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
+  },
+  [ModuleDatabaseKeys.NSEC_ElectricalAndElectronics2]: {
+    name: "Electrical and Electronics 2",
+    category: ModuleYearGroupsEnum.Year1sem2,
+    skills: [
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    relatedMaterials: [],
+    learningOutcomes: [
+      "Understand advanced concepts in AC circuit analysis, including phasors and impedance..",
+      "Analyze and design complex electrical circuits using network theorems.",
+      "Gain proficiency in operational amplifiers and their applications in analog circuits.",
+      "Comprehend the principles and applications of digital electronics and logic circuits.",
+      "Apply knowledge of power electronics and electrical machines in engineering systems.",
+    ],
+    parentCourse: CourseDatabaseKeys.NSEC_MechanicalEngineering,
+  },
 };
 
 /**

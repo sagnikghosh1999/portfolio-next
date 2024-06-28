@@ -45,7 +45,12 @@ const rolesMap: Database<RoleInterface> = {
     ],
     startDate: "September 2022",
     endDate: "Present",
-    relatedMaterials: [CertificateDatabaseKeys.AzureDataFundamentals],
+    relatedMaterials: [
+      CertificateDatabaseKeys.AzureDataFundamentals,
+      CertificateDatabaseKeys.AzureFundamentals,
+      CertificateDatabaseKeys.CognizantGenAIBasics,
+      CertificateDatabaseKeys.CognizantPysparkIntermediate,
+    ],
     company: CompanyDatabaseKeys.Cognizant,
   },
   [RoleDatabaseKeys.ProgrammerAnalystTrainee]: {

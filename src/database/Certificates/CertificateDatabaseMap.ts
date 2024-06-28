@@ -68,6 +68,82 @@ const certificateMap: Database<CertificateInterface> = {
       "Describe considerations for working with non-relational data on Azure",
     ],
   },
+  [CertificateDatabaseKeys.AzureDataEngineerAssociate]: {
+    name: "Azure Data Engineer Associate",
+    category: CertificateCategoriesEnum.CloudComputing,
+    issuer: CertificateIssuersEnum.Microsoft,
+    certificateURL:
+      "https://learn.microsoft.com/en-us/users/sagnikghosh-4678/credentials/f1a81750a7afb373",
+    skills: [
+      SkillDatabaseKeys.Azure_BlobStorage,
+      SkillDatabaseKeys.Azure_ResourceManager,
+      SkillDatabaseKeys.DataEngineering,
+      SkillDatabaseKeys.Azure_BlobStorage,
+      SkillDatabaseKeys.Azure_DataFactory,
+      SkillDatabaseKeys.Azure_Datalake,
+      SkillDatabaseKeys.Azure_Databricks,
+      SkillDatabaseKeys.Azure,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      The DP-203: Data Engineering on Microsoft Azure certification validates expertise in integrating, transforming, and consolidating data from various structured and unstructured data systems. It covers designing and implementing data solutions, ensuring data quality, and optimizing data processing. Ideal for data engineers, it enhances skills in building and maintaining data workflows on Azure.`,
+    learningOutcomes: [
+      "Design and implement data storage solutions on Azure.",
+      "Develop and optimize data processing pipelines using Azure Data Factory.",
+      "Integrate, transform, and consolidate data from various sources.",
+      "Ensure data quality and consistency across Azure data platforms.",
+      "Implement security and data protection measures in Azure data solutions.",
+    ],
+  },
+  [CertificateDatabaseKeys.AzureAdministratorAssociate]: {
+    name: "Azure Administrator Associate",
+    category: CertificateCategoriesEnum.CloudComputing,
+    issuer: CertificateIssuersEnum.Microsoft,
+    certificateURL:
+      "https://learn.microsoft.com/api/credentials/share/en-us/SAGNIKGHOSH-4678/E93A243C4AE783CD",
+    skills: [
+      SkillDatabaseKeys.Azure_BlobStorage,
+      SkillDatabaseKeys.Azure_ResourceManager,
+      SkillDatabaseKeys.DataEngineering,
+      SkillDatabaseKeys.Azure_Datalake,
+      SkillDatabaseKeys.Azure,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      The Azure Administrator Associate Certification validates expertise in managing Azure resources. It covers implementing, monitoring, and maintaining Azure services, including storage, networking, and virtual machines. Ideal for IT professionals, this certification ensures proficiency in managing Azure environments, optimizing performance, and securing infrastructure for cloud-based solutions.`,
+    learningOutcomes: [
+      "Manage and monitor Azure resources and services effectively.",
+      "Implement and manage storage solutions in Azure.",
+      "Configure and manage virtual networks and network security.",
+      "Deploy and manage Azure compute resources, including virtual machines.",
+      "Secure and manage identities with Azure Active Directory.",
+    ],
+  },
+  [CertificateDatabaseKeys.AzureAIFundamentals]: {
+    name: "Azure AI Fundamentals",
+    category: CertificateCategoriesEnum.CloudComputing,
+    issuer: CertificateIssuersEnum.Microsoft,
+    certificateURL:
+      "https://learn.microsoft.com/en-us/users/sagnikghosh-4678/credentials/ebc987627748d06e",
+    skills: [
+      SkillDatabaseKeys.Azure_ResourceManager,
+      SkillDatabaseKeys.DataEngineering,
+      SkillDatabaseKeys.Azure_AppService,
+      SkillDatabaseKeys.Azure,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `The AI-900: Microsoft Azure AI Fundamentals certification provides foundational knowledge of artificial intelligence and its services on Azure. It covers machine learning, computer vision, natural language processing, and conversational AI. Ideal for beginners, this certification ensures understanding of core AI concepts and how to implement them using Azure AI services.`,
+    learningOutcomes: [
+      "Understand foundational AI concepts and principles.",
+      "Learn about Azure AI services, including cognitive APIs and Azure Machine Learning.",
+      "Explore practical applications of AI in business scenarios.",
+      "Gain insights into computer vision and natural language processing capabilities.",
+      "Prepare to leverage Azure AI services to enhance business operations and innovation.",
+    ],
+  },
   //^ Programming Languages
   [CertificateDatabaseKeys.HackerrankJavascriptBasic]: {
     name: "Hackerrank Javascript Basic",
@@ -160,6 +236,29 @@ const certificateMap: Database<CertificateInterface> = {
       "Data Processing with RDDs (Resilient Distributed Datasets): Understanding the RDD abstraction. Creating RDDs and performing transformations and actions. Working with key-value pairs and aggregations.",
       "Machine Learning with PySpark MLlib: Overview of MLlib and its components.Building and evaluating machine learning models.Working with feature engineering and pipelines.",
       "Optimizing and Tuning Spark Applications: Understanding Spark job execution and the DAG (Directed Acyclic Graph). Tuning Spark configurations for performance optimization. Best practices for debugging and monitoring Spark applications.",
+    ],
+  },
+  // Generative AI
+  [CertificateDatabaseKeys.CognizantGenAIBasics]: {
+    name: "Generative AI Basics Assesment",
+    category: CertificateCategoriesEnum.GenerativeAI,
+    issuer: CertificateIssuersEnum.Cognizant,
+    certificateURL: "",
+    skills: [
+      SkillDatabaseKeys.Python,
+      SkillDatabaseKeys.OpenAI,
+      SkillDatabaseKeys.APIs,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      The General AI Certification provides comprehensive training on artificial intelligence concepts, techniques, and applications. It covers machine learning, deep learning, natural language processing, and ethical AI practices. Ideal for professionals and students, this certification enhances skills, ensuring proficiency in deploying AI solutions across various industries.`,
+    learningOutcomes: [
+      "Gain a solid understanding of core AI concepts and techniques.",
+      "Develop proficiency in machine learning and deep learning algorithms.",
+      "Learn to implement natural language processing solutions.",
+      "Understand and apply ethical practices in AI development.",
+      "Acquire skills to deploy AI solutions across diverse industries.",
     ],
   },
 };

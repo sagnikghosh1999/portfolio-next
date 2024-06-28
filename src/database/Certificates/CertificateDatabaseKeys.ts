@@ -22,12 +22,16 @@ enum CertificateDatabaseKeys {
 
   //^ Data Engineering
   CognizantPysparkIntermediate = "5ff38238-ebcf-471d-85c0-bc0fbd00f756",
+  CognizantGenAIBasics = "013ba1b5-7f78-4902-98db-bb223a138b30",
 
   //^ Management
 
   //^ Cloud Computing
   AzureDataFundamentals = "884c294acfce5138",
+  AzureDataEngineerAssociate = "f1a81750a7afb373",
   AzureFundamentals = "9893579dc8f2c222",
+  AzureAdministratorAssociate = "e93a243c4ae783cd",
+  AzureAIFundamentals = "ebc987627748d06e",
 }
 
 export default CertificateDatabaseKeys;

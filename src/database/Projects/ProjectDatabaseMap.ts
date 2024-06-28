@@ -15,41 +15,7 @@ import ModuleDatabaseKeys from "@/database/Modules/ModuleDatabaseKeys";
  * The order skills is the order that is used when displaying the skills on the website.
  */
 const projectMap: Database<ProjectInterface> = {
-  [ProjectDatabaseKeys.TeslaClone]: {
-    name: `Tesla Clone`,
-    description: `
-          This is a basic landing page clone of the Tesla website built with NextJS, ReactJs and TailwindCss
-          `,
-    repositoryURL: `https://github.com/sagnikghosh1999/tesla-clone`,
-    deploymentURL: `https://tesla-clone-1999.vercel.app/`,
-    skills: [
-      SkillDatabaseKeys.JavaScript,
-      SkillDatabaseKeys.NextJS,
-      SkillDatabaseKeys.ReactJS,
-      SkillDatabaseKeys.GitHub,
-      SkillDatabaseKeys.Git,
-      SkillDatabaseKeys.HTML,
-      SkillDatabaseKeys.CSS,
-      SkillDatabaseKeys.NPM,
-      SkillDatabaseKeys.ESLint,
-      SkillDatabaseKeys.Prettier,
-
-      SkillDatabaseKeys.ProblemSolving,
-      SkillDatabaseKeys.ProjectManagement,
-      SkillDatabaseKeys.CriticalThinking,
-      SkillDatabaseKeys.Creativity,
-      SkillDatabaseKeys.Adaptability,
-      SkillDatabaseKeys.TimeManagement,
-      SkillDatabaseKeys.ScopeManagement,
-      SkillDatabaseKeys.StakeholderManagement,
-      SkillDatabaseKeys.Communication,
-      SkillDatabaseKeys.RiskManagement,
-      SkillDatabaseKeys.DesignPatterns,
-    ],
-    category: ProjectCategoriesEnum.FullStackWebDevelopment,
-    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.TeslaClone),
-    relatedMaterials: [],
-  },
+  //Full stack project
   [ProjectDatabaseKeys.AirbnbClone]: {
     name: `Airbnb Clone`,
     description: `
@@ -90,6 +56,43 @@ const projectMap: Database<ProjectInterface> = {
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.AirbnbClone),
     relatedMaterials: [],
   },
+
+  [ProjectDatabaseKeys.TeslaClone]: {
+    name: `Tesla Clone`,
+    description: `
+          This is a basic landing page clone of the Tesla website built with NextJS, ReactJs and TailwindCss
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/tesla-clone`,
+    deploymentURL: `https://tesla-clone-1999.vercel.app/`,
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.NextJS,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.NPM,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.StakeholderManagement,
+      SkillDatabaseKeys.Communication,
+      SkillDatabaseKeys.RiskManagement,
+      SkillDatabaseKeys.DesignPatterns,
+    ],
+    category: ProjectCategoriesEnum.FrontEndWebDevelopment,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.TeslaClone),
+    relatedMaterials: [],
+  },
+
   [ProjectDatabaseKeys.TravelWebsite]: {
     name: `Travel website landing page`,
     description: `
