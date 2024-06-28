@@ -34,7 +34,7 @@ const courseMap: Database<CourseInterface> = {
       ModuleDatabaseKeys.NSEC_FluidMechanicsAndHydraulicMachines,
       ModuleDatabaseKeys.NSEC_HeatTransfer,
       ModuleDatabaseKeys.NSEC_ICEngines,
-      ModuleDatabaseKeys.NSEC_InternetServices,
+      ModuleDatabaseKeys.NSEC_Communication,
       ModuleDatabaseKeys.NSEC_ManufacturingProcesses,
       ModuleDatabaseKeys.NSEC_Mathematics1,
       ModuleDatabaseKeys.NSEC_Mathematics2,
@@ -47,7 +47,7 @@ const courseMap: Database<CourseInterface> = {
       ModuleDatabaseKeys.NSEC_StrengthOfMaterials,
       ModuleDatabaseKeys.NSEC_ThermodynamicsAndFluid,
     ],
-    relatedMaterials: [ProjectDatabaseKeys.TeslaClone],
+    relatedMaterials: [],
   },
 };
 

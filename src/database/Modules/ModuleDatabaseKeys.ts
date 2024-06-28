@@ -7,16 +7,19 @@
  * @see {@link universityModuleMap} at `database/university-modules.ts`
  */
 enum ModuleDatabaseKeys {
+  // 1st semester
   NSEC_Physics1 = "PH101",
   NSEC_Mathematics1 = "M101",
   NSEC_EngineeringMechanics = "ME101",
-  NSEC_InternetServices = "CS1840",
+  NSEC_Communication = "HU101",
   NSEC_ElectricalAndElectronics1 = "ES101",
+  // 2nd semester
   NSEC_ComputerProgramming = "CS201",
   NSEC_Chemistry = "CH201",
   NSEC_Mathematics2 = "M201",
   NSEC_ThermodynamicsAndFluid = "ME201",
   NSEC_ElectricalAndElectronics2 = "ES201",
+
   NSEC_Physics2 = "PH301",
   NSEC_AppliedThemodynamics = "ME301",
   NSEC_StrengthOfMaterials = "ME302",
