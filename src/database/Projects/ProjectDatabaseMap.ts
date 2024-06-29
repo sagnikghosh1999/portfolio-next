@@ -131,6 +131,40 @@ const projectMap: Database<ProjectInterface> = {
       // ModuleDatabaseKeys.NSEC_Chemistry
     ],
   },
+  [ProjectDatabaseKeys.ResumeBuilder]: {
+    name: `Resume Builder Webste`,
+    description: `
+          This is a basic resume builder single page application built with ReactJs.
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/resumebuilder`,
+    deploymentURL: `https://buildresumefree.netlify.app/`,
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.NPM,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.StakeholderManagement,
+      SkillDatabaseKeys.Communication,
+      SkillDatabaseKeys.RiskManagement,
+      SkillDatabaseKeys.DesignPatterns,
+    ],
+    category: ProjectCategoriesEnum.FrontEndWebDevelopment,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.ResumeBuilder),
+    relatedMaterials: [],
+  },
 };
 
 /**

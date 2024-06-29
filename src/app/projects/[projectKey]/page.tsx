@@ -8,15 +8,25 @@ import filterSkillsByType from "@/actions/skills/filter/filterSkillsByType";
 import categoriseAndGroupSkills from "@/actions/skills/group/categoriseAndGroupSkills";
 import Gallery from "@/components/Gallery/Gallery";
 import MaterialList from "@/components/MaterialLists/MaterialList";
+import Reader from "@/components/Reader/Reader";
 import SkillTableSection from "@/components/Skills/SkillTableSection";
 import SkillTag from "@/components/Tags/SkillTag";
 import HeadingThree from "@/components/Text/HeadingThree";
 import HeadingTwo from "@/components/Text/HeadingTwo";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/shadcn/ui/accordion";
 import { AspectRatio } from "@/components/shadcn/ui/aspect-ratio";
 import { Button } from "@/components/shadcn/ui/button";
 import developerName from "@/constants/developerName";
 import { PROJECTS_PAGE } from "@/constants/pages";
+import projectDatabaseMap from "@/database/Projects/ProjectDatabaseMap";
+import ProjectInterface from "@/database/Projects/ProjectInterface";
 import SkillDatabaseKeys from "@/database/Skills/SkillDatabaseKeys";
+import skillDatabaseMap from "@/database/Skills/SkillDatabaseMap";
 import SkillCategoriesEnum from "@/enums/Skill/SkillCategoriesEnum";
 import SkillTypesEnum from "@/enums/Skill/SkillTypesEnum";
 import GroupedSkillsCategoriesInterface from "@/interfaces/skills/GroupedSkillsInterface";
@@ -25,11 +35,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
-import { BsArrowUpRightCircle, BsGithub } from "react-icons/bs";
-import ProjectReader from "./components/ProjectReader";
-import projectDatabaseMap from "@/database/Projects/ProjectDatabaseMap";
-import ProjectInterface from "@/database/Projects/ProjectInterface";
-import skillDatabaseMap from "@/database/Skills/SkillDatabaseMap";
+import { BsArrowUpRightCircle, BsGithub, BsPlusCircle } from "react-icons/bs";
 
 /**
  * Generates the metadata for the project page.
@@ -44,24 +50,27 @@ import skillDatabaseMap from "@/database/Skills/SkillDatabaseMap";
 export async function generateMetadata(
   { params, searchParams }: ProjectPageProps,
   parent: ResolvingMetadata
-): Promise<Metadata> {
+): Promise<Metadata | undefined> {
   // Read route params
   const projectKey: string = params.projectKey;
 
-  // Assume getProjectBySlug function fetches project by slug
   const project: ProjectInterface = projectDatabaseMap[projectKey];
 
-  // Create metadata based on the project details
-  return {
-    title: `${developerName} - Projects: ${project?.name}`,
-    description: project?.description,
-    category: `${PROJECTS_PAGE.label}`,
-    creator: developerName,
-    keywords: [
-      project.name,
-      ...project?.skills.map((skill) => skillDatabaseMap[skill].name),
-    ],
-  };
+  if (!project) {
+    notFound();
+  }
+
+  if (!project.archived) {
+    return {
+      title: `${developerName} - Projects: ${project?.name}`,
+      description: project?.description,
+      category: `${PROJECTS_PAGE.label}`,
+      creator: developerName,
+      keywords: [project.name],
+    };
+  }
+
+  return undefined;
 }
 
 /**
@@ -191,14 +200,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
    */
   const features: string | undefined = getMarkdownFromFileSystem(
     `public${basePath}/${projectKey}/features.md`
-  )?.content;
-
-  /**
-   * Get the features and blog content from the file system.
-   * This is used to display the features and blog sections.
-   */
-  const blog: string | undefined = getMarkdownFromFileSystem(
-    `public${basePath}/${projectKey}/report.md`
   )?.content;
 
   return (
@@ -351,25 +352,46 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           </div>
 
           {/* Divider */}
-          {!(!features || !!blog) ||
-            (projectData.relatedMaterials &&
-              projectData.relatedMaterials.length > 0 && (
-                <div className="pt-2 pb-3 border-b border-gray-200 dark:border-neutral-600" />
-              ))}
+          {!!features ||
+          (projectData.relatedMaterials &&
+            projectData.relatedMaterials.length > 0) ? (
+            <div className="pt-2 pb-3 border-b border-gray-200 dark:border-neutral-600" />
+          ) : (
+            <></>
+          )}
 
           {/* Features Section */}
-          <div>
-            <ProjectReader content={{ features, blog }} />
-          </div>
+          {!!features && (
+            <>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    <div className="flex items-center space-x-3">
+                      <BsPlusCircle size={26} className="text-neutral-500" />
+                      <p
+                        className="
+                          text-lg 
+                          text-neutral-600 dark:text-neutral-400
+                          font-semibold
+                          "
+                      >
+                        Features
+                      </p>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-2">
+                    <Reader content={features} />
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </>
+          )}
 
           {/* Related Materials Section */}
           {projectData.relatedMaterials &&
             projectData.relatedMaterials.length > 0 && (
               <>
-                <MaterialList
-                  materialKeys={projectData.relatedMaterials}
-                  sectionName={projectData.name}
-                />
+                <MaterialList materialKeys={projectData.relatedMaterials} />
               </>
             )}
         </div>
