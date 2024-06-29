@@ -20,7 +20,11 @@ const ProjectsSection = () => {
    * Only projects matching these slugs will be shown.
    * In other words, only these projects will be displayed on the home page.
    */
-  const displayedProjects: string[] = [ProjectDatabaseKeys.TeslaClone];
+  const displayedProjects: string[] = [
+    ProjectDatabaseKeys.AirbnbClone,
+    ProjectDatabaseKeys.TeslaClone,
+    ProjectDatabaseKeys.TravelWebsite,
+  ];
 
   return (
     <section id="projects" className="home-section-wrapper">

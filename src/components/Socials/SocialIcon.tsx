@@ -29,7 +29,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({
 }) => (
   <Tooltip>
     <TooltipTrigger>
-      <Link href={link} target="_blank">
+      <Link href={link} target="_blank" aria-label={name}>
         <IconComponent
           className="
                 md:hover:-translate-y-1
