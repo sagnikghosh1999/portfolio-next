@@ -22,8 +22,12 @@ enum CertificateDatabaseKeys {
 
   //^ Data Engineering
   CognizantPysparkIntermediate = "5ff38238-ebcf-471d-85c0-bc0fbd00f756",
-  CognizantGenAIBasics = "013ba1b5-7f78-4902-98db-bb223a138b30",
+  DatabricksFundamentals = "c30f66d1-f5b4-44c5-83a7-67c6efcad2c9",
+  DatabricksLakehouseFundamentals = "8374587b-46e9-4074-82d7-62b614f469c4",
 
+  //Generative AI
+  DatabricksGenAIFundamentals = "0431e3d8-f0bd-47dc-a101-fbd204836d31",
+  CognizantGenAIBasics = "013ba1b5-7f78-4902-98db-bb223a138b30",
   //^ Management
 
   //^ Cloud Computing

@@ -4,9 +4,10 @@
  */
 enum CertificateIssuersEnum {
   Udemy = "Udemy",
-  HackerRank = "Hacker Rank",
+  HackerRank = "HackerRank",
   Microsoft = "Microsoft",
   Cognizant = "Cognizant",
+  Databricks = "Databricks",
 }
 
 export default CertificateIssuersEnum;
