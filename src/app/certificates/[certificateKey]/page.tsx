@@ -47,11 +47,11 @@ export async function generateMetadata(
   return {
     title: `${developerName} - Certificates: ${certificate?.name}`,
     description: certificate?.description,
-    category: `${CERTIFICATES_PAGE.label}`,
+    category: `${CERTIFICATES_PAGE?.label}`,
     creator: developerName,
     keywords: [
       certificate?.name,
-      ...certificate?.skills.map((skill) => skillDatabaseMap[skill].name),
+      ...certificate?.skills.map((skill) => skillDatabaseMap[skill]?.name),
     ],
   };
 }
@@ -96,7 +96,7 @@ type CertificatesPageProps = {
  * @returns Page displaying the certificate and its details
  */
 const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
-  const certificateKey: string = params.certificateKey;
+  const certificateKey: string = params?.certificateKey;
   const certificateData: CertificateInterface =
     certificateDatabaseMap[certificateKey];
 
@@ -105,19 +105,19 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
   }
 
   const technologies: SkillDatabaseKeys[] = filterSkillsByType(
-    certificateData.skills,
+    certificateData?.skills,
     skillDatabaseMap,
-    SkillTypesEnum.Technology
+    SkillTypesEnum?.Technology
   );
   const generalSkills: SkillDatabaseKeys[] = filterSkillsByType(
-    certificateData.skills,
+    certificateData?.skills,
     skillDatabaseMap,
-    SkillTypesEnum.Technical
+    SkillTypesEnum?.Technical
   );
   const softSkills: SkillDatabaseKeys[] = filterSkillsByType(
-    certificateData.skills,
+    certificateData?.skills,
     skillDatabaseMap,
-    SkillTypesEnum.Soft
+    SkillTypesEnum?.Soft
   );
 
   // Simplified grouping of skill types for certificates
@@ -125,39 +125,39 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
     categoriseAndGroupSkills(
       technologies,
       skillDatabaseMap,
-      SkillTypesEnum.Technology,
+      SkillTypesEnum?.Technology,
       "Technologies"
     ),
     categoriseAndGroupSkills(
       generalSkills,
       skillDatabaseMap,
-      SkillTypesEnum.Technical,
+      SkillTypesEnum?.Technical,
       "Technical Skills"
     ),
     categoriseAndGroupSkills(
       softSkills,
       skillDatabaseMap,
-      SkillTypesEnum.Soft,
+      SkillTypesEnum?.Soft,
       "Soft Skills"
     ),
   ];
 
-  const certificateImage = `${CERTIFICATES_PAGE.path}/${certificateKey}.jpg`;
+  const certificateImage = `${CERTIFICATES_PAGE?.path}/${certificateKey}.jpg`;
 
   return (
     <main>
       <div className="sr-only">
-        <h1>{certificateData.name}</h1>
-        <h2>{certificateData.description}</h2>
+        <h1>{certificateData?.name}</h1>
+        <h2>{certificateData?.description}</h2>
 
         <h3>Skills for certificate:</h3>
-        {certificateData.skills.map((skill) => (
-          <p key={skill}>{skillDatabaseMap[skill].name}</p>
+        {certificateData?.skills.map((skill) => (
+          <p key={skill}>{skillDatabaseMap[skill]?.name}</p>
         ))}
       </div>
 
       <div className="space-y-6 align-top min-h-[85vh] relative">
-        <HeadingTwo title={certificateData.name} />
+        <HeadingTwo title={certificateData?.name} />
 
         <div className="space-y-1">
           {/* Certificate Image */}
@@ -176,12 +176,12 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
 					"
             >
               <AspectRatio
-                ratio={certificateData.issuer === "Microsoft" ? 1.9 : 4 / 3}
+                ratio={certificateData?.issuer === "Microsoft" ? 1.9 : 4 / 3}
                 className="overflow-hidden relative"
               >
                 <Image
                   src={certificateImage}
-                  alt={`${certificateData.name} certificate image`}
+                  alt={`${certificateData?.name} certificate image`}
                   className="rounded-xl object-cover"
                   fill={true}
                   priority={true}
@@ -210,19 +210,19 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
                   <HeadingThree title="Description" />
                 </div>
                 <p className="text-lg text-neutral-800 dark:text-neutral-300">
-                  {certificateData.description}
+                  {certificateData?.description}
                 </p>
               </div>
             )}
 
             <div>
               {/* Learning Outcomes */}
-              {certificateData.learningOutcomes && (
+              {certificateData?.learningOutcomes && (
                 <>
                   <div className="text-center lg:text-left">
                     <HeadingThree title="Learning Objectives" />
                   </div>
-                  <StringList items={certificateData.learningOutcomes} />
+                  <StringList items={certificateData?.learningOutcomes} />
                 </>
               )}
             </div>
@@ -240,9 +240,11 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
               </div>
 
               <div>
-                <div className="md:text-left text-center">
-                  <HeadingThree title="Links" />
-                </div>
+                {certificateData?.certificateURL && (
+                  <div className="md:text-left text-center">
+                    <HeadingThree title="Links" />
+                  </div>
+                )}
                 {/* Links */}
                 <div
                   className="
@@ -253,9 +255,9 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
                     gap-2"
                 >
                   {/* Issuer Page */}
-                  {certificateData.certificateURL && (
+                  {certificateData?.certificateURL && (
                     <Link
-                      href={certificateData.certificateURL}
+                      href={certificateData?.certificateURL}
                       target="_blank"
                       className="w-auto md:w-full"
                     >
@@ -279,13 +281,13 @@ const CertificatesPage: React.FC<CertificatesPageProps> = ({ params }) => {
               </div>
             </div>
 
-            {certificateData.relatedMaterials &&
-              certificateData.relatedMaterials.length > 0 && (
+            {certificateData?.relatedMaterials &&
+              certificateData?.relatedMaterials.length > 0 && (
                 <div className="mt-8">
                   <MaterialList
-                    materialKeys={certificateData.relatedMaterials}
-                    defaultTab={MaterialTypeEnum.Certificates}
-                    sectionName={certificateData.name}
+                    materialKeys={certificateData?.relatedMaterials}
+                    defaultTab={MaterialTypeEnum?.Certificates}
+                    sectionName={certificateData?.name}
                   />
                 </div>
               )}

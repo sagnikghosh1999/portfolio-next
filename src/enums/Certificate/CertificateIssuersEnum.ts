@@ -6,6 +6,7 @@ enum CertificateIssuersEnum {
   Udemy = "Udemy",
   HackerRank = "Hacker Rank",
   Microsoft = "Microsoft",
+  Cognizant = "Cognizant",
 }
 
 export default CertificateIssuersEnum;

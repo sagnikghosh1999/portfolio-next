@@ -30,7 +30,11 @@ export default function RootLayoutWithProviders({
 }) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning className={montserrat.className}>
+      <html
+        lang="en"
+        suppressHydrationWarning={true}
+        className={montserrat.className}
+      >
         <body>
           <Providers>
             <Navbar />

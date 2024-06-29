@@ -16,6 +16,7 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/shadcn/ui/dropdown-menu";
@@ -143,28 +144,32 @@ const LanguageModal: React.FC<LanguageTagWithModalProps> = ({
                 </div>
                 <DropdownMenu>
                   <DropdownMenuTrigger className="w-48">
-                    <Button variant="default" className="w-full">
-                      <div className="flex items-start justify-between space-x-2 w-full">
-                        <span>{currentGroupedName}</span>
-                        <BsChevronDown
-                          fontSize={16}
-                          className="text-neutral-700 dark:text-neutral-200 mt-1"
-                        />
-                      </div>
-                    </Button>
+                    <div className="w-full">
+                      <Button variant="default" className="w-48">
+                        <div className="flex items-start justify-between space-x-2 w-full">
+                          <span>{currentGroupedName}</span>
+                          <BsChevronDown
+                            fontSize={16}
+                            className="text-neutral-700 dark:text-neutral-200 mt-1"
+                          />
+                        </div>
+                      </Button>
+                    </div>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-48">
-                    {options.map((option, index) => (
-                      <DropdownMenuItem
-                        key={index}
-                        className={`${
-                          option.slug === groupedBy ? "font-bold" : ""
-                        }`}
-                        onSelect={() => setGroupedBy(option.slug)}
-                      >
-                        {option.entryName}
-                      </DropdownMenuItem>
-                    ))}
+                    <DropdownMenuGroup className="w-full">
+                      {options.map((option, index) => (
+                        <DropdownMenuItem
+                          key={index}
+                          className={`${
+                            option.slug === groupedBy ? "font-bold" : ""
+                          }`}
+                          onSelect={() => setGroupedBy(option.slug)}
+                        >
+                          {option.entryName}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuGroup>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
