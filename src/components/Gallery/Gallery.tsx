@@ -87,7 +87,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
                       height={1125}
                       priority
                       className="
-                        w-full md:h-[65vh] h-full
+                        w-full md:h-[65vh] sm:h-[40vh] h-[30vh]
                         object-contain 
                         rounded-xl 
                         transition-colors duration-700 
