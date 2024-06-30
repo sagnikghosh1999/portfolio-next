@@ -7,10 +7,13 @@
  * @see {@link projectMap} at `database/projects.ts`
  */
 enum ProjectDatabaseKeys {
+  //fullstack
   TeslaClone = "tesla-clone",
+  //frontend
   AirbnbClone = "airbnb-clone",
   TravelWebsite = "travel-website",
   ResumeBuilder = "resume-builder",
+  MovieApp = "movie-app",
 }
 
 export default ProjectDatabaseKeys;

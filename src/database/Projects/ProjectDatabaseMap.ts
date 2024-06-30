@@ -165,6 +165,43 @@ const projectMap: Database<ProjectInterface> = {
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.ResumeBuilder),
     relatedMaterials: [],
   },
+  [ProjectDatabaseKeys.MovieApp]: {
+    name: `Movie Trailer Webste`,
+    description: `
+          This is a basic movie trailer single page application built with ReactJs and TMDB API.
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/sMoviezz`,
+    deploymentURL: `https://smoviezz.netlify.app/`,
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.NPM,
+
+      SkillDatabaseKeys.APIs,
+      SkillDatabaseKeys.Axios,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.StakeholderManagement,
+      SkillDatabaseKeys.Communication,
+      SkillDatabaseKeys.RiskManagement,
+      SkillDatabaseKeys.DesignPatterns,
+    ],
+    category: ProjectCategoriesEnum.FrontEndWebDevelopment,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.MovieApp),
+    relatedMaterials: [],
+  },
 };
 
 /**
