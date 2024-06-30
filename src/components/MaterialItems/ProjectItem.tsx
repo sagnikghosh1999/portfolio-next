@@ -41,7 +41,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
     <div
       className="mb-4 md:mb-6
         bg-neutral-100 dark:bg-neutral-950 
-        p-4 sm:p-0
+        p-4 
         rounded-xl 
         sm:bg-white sm:dark:bg-neutral-900 
         border border-neutral-200 dark:border-neutral-800 lg:border-0
@@ -103,7 +103,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
           </Link>
 
           {/* Project Description */}
-          <p className="text-xl text-left leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+          <p className="lg:text-xl md:text-xl text-left md:leading-6 lg:leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
             {projectData.description}
           </p>
 

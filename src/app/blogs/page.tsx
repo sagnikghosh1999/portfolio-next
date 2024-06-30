@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: BLOG_PAGE.description,
   category: `${BLOG_PAGE.label}`,
   creator: developerName,
-  keywords: Object.values(blogsDatabaseMap).map((blog) => blog.name),
+  keywords: Object.values(blogsDatabaseMap)?.map((blog) => blog?.name),
 };
 
 /**
@@ -43,8 +43,8 @@ export default function BlogPage() {
         <h1>Blogs & Articles:</h1>
         <ul>
           {Object.values(blogsDatabaseMap).map((blog) => (
-            <li key={blog.name}>
-              {blog.name}: {blog.subtitle}
+            <li key={blog?.name}>
+              {blog?.name}: {blog?.subtitle}
             </li>
           ))}
         </ul>

@@ -125,7 +125,7 @@ const HeroSection = () => {
                 Projects
               </Button>
               <Button
-                variant="outline2"
+                variant="outline"
                 onClick={() => {
                   scrollToSection("about");
                 }}

@@ -4,6 +4,7 @@
  */
 enum ExperienceCategoriesEnum {
   Software = "Software",
+  Mechanical = "Mechanical Engineer",
   Other = "Other",
 }
 

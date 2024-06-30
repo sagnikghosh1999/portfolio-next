@@ -86,7 +86,7 @@ const SkillTableSection: React.FC<SkillTableSectionProps> = ({
       {/* Tab Content */}
       {nonEmptySkillCategories.map(({ title, skillCategories }) => (
         <TabsContent key={stringToSlug(title)} value={stringToSlug(title)}>
-          <div className="mt-12 md:mt-4 text-center md:text-left">
+          <div className="mt-4 text-center md:text-left">
             {/* Adjust CategorySkillDisplay to accept the new structure */}
             <CategorySkillDisplay skillCategories={skillCategories} />
           </div>

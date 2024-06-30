@@ -4,6 +4,7 @@
  */
 enum ExperienceTypeEnum {
   Professional = "Professional",
+  Training = "Training",
   Volunteering = "Volunteering",
 }
 

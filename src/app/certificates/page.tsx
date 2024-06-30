@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: CERTIFICATES_PAGE.description,
   category: `${CERTIFICATES_PAGE.label}`,
   creator: developerName,
-  keywords: Object.values(certificateDatabaseMap).map(
+  keywords: Object.values(certificateDatabaseMap)?.map(
     (certificate) => certificate.name
   ),
 };
@@ -45,9 +45,9 @@ const CertificatesPage: React.FC = () => {
       <div className="sr-only">
         <h1>Certificates & Online Courses:</h1>
         <ul>
-          {Object.values(certificateDatabaseMap).map((certificate) => (
-            <li key={certificate.name}>
-              {certificate.name}: {certificate.description}
+          {Object.values(certificateDatabaseMap)?.map((certificate) => (
+            <li key={certificate?.name}>
+              {certificate?.name}: {certificate?.description}
             </li>
           ))}
         </ul>

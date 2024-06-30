@@ -8,6 +8,7 @@
  */
 enum CompanyDatabaseKeys {
   Cognizant = "cognizant",
+  DSP = "durgapur-steel-plant",
 }
 
 export default CompanyDatabaseKeys;
