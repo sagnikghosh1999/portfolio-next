@@ -133,10 +133,10 @@ const ModulePage: React.FC<ModulePageProps> = ({ params }) => {
     { name: HOME_PAGE.label, path: HOME_PAGE.path },
     { name: EDUCATION_PAGE.label, path: EDUCATION_PAGE.path },
     {
-      name: parentCourse.name,
+      name: parentCourse?.name,
       path: `${EDUCATION_PAGE.path}/${moduleData.parentCourse}`,
     },
-    { name: moduleData.name },
+    { name: moduleData?.name },
   ];
 
   return (
@@ -158,7 +158,7 @@ const ModulePage: React.FC<ModulePageProps> = ({ params }) => {
       </div>
 
       <div>
-        <HeadingTwo title={moduleData.name} />
+        <HeadingTwo title={moduleData?.name} />
         <p
           className="
             text-neutral-600 dark:text-neutral-300 
@@ -175,12 +175,12 @@ const ModulePage: React.FC<ModulePageProps> = ({ params }) => {
         <div className="space-y-12 pt-6">
           <div className="mt-4 ">
             {/* Learning Outcomes */}
-            {moduleData.learningOutcomes && (
+            {moduleData?.learningOutcomes && (
               <>
                 <div className="text-center lg:text-left">
                   <HeadingThree title="Learning Outcomes" />
                 </div>
-                <StringList items={moduleData.learningOutcomes} />
+                <StringList items={moduleData?.learningOutcomes} />
               </>
             )}
           </div>

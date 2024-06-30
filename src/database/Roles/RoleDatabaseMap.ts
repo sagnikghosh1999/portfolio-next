@@ -74,6 +74,28 @@ const rolesMap: Database<RoleInterface> = {
       SkillDatabaseKeys.QualityManagement,
     ],
   },
+  [RoleDatabaseKeys.Intern]: {
+    name: "Intern, Trainee",
+    archived: true,
+    category: ExperienceCategoriesEnum.Mechanical,
+    type: ExperienceTypeEnum.Training,
+    company: CompanyDatabaseKeys.DSP,
+    startDate: "February 2020",
+    endDate: "March 2020",
+    skills: [
+      SkillDatabaseKeys.Mechanics,
+      SkillDatabaseKeys.Communication,
+      SkillDatabaseKeys.Teamwork,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.RiskManagement,
+      SkillDatabaseKeys.StakeholderManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.QualityManagement,
+    ],
+  },
 };
 
 export const roleDatabaseKeys: RoleDatabaseKeys[] = Object.keys(

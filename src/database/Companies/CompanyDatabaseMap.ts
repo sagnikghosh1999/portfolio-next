@@ -8,8 +8,18 @@ const companiesMap: Database<CompanyInterface> = {
     name: "Cognizant Technology Solutions",
     location: "Kolkata, India",
     website: "https://www.cognizant.com/",
-    positions: [RoleDatabaseKeys.ProgrammerAnalyst],
+    positions: [
+      RoleDatabaseKeys.ProgrammerAnalyst,
+      RoleDatabaseKeys.ProgrammerAnalystTrainee,
+    ],
     logo: addCompanyThumbnail(CompanyDatabaseKeys.Cognizant),
+  },
+  [CompanyDatabaseKeys.DSP]: {
+    name: "Durgapur Steel Plant",
+    location: "Durgapur, India",
+    website: "https://www.sail.co.in/en/plants/about-durgapur-steel-plant",
+    positions: [RoleDatabaseKeys.Intern],
+    logo: addCompanyThumbnail(CompanyDatabaseKeys.DSP),
   },
 };
 

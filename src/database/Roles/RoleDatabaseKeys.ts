@@ -9,6 +9,7 @@
 enum RoleDatabaseKeys {
   ProgrammerAnalystTrainee = "programmer-analyst-trainee",
   ProgrammerAnalyst = "programmer-analyst",
+  Intern = "intern-trainee",
 }
 
 export default RoleDatabaseKeys;

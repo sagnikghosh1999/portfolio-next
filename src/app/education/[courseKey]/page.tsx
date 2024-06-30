@@ -182,7 +182,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ params, searchParams }) => {
       </div>
 
       <div>
-        <HeadingTwo title={courseData.name} />
+        <HeadingTwo title={courseData?.name} />
 
         <div
           className="
@@ -202,7 +202,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ params, searchParams }) => {
               <Image
                 src={courseImage}
                 key={courseImage}
-                alt={`${courseData.name} cover image`}
+                alt={`${courseData?.name} cover image`}
                 fill={true}
                 loading="lazy"
                 quality={15}
@@ -216,12 +216,12 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ params, searchParams }) => {
 
           {/* Right */}
           <div className="py-2">
-            <HeadingThree title={courseData.university} />
+            <HeadingThree title={courseData?.university} />
 
             <p className="text-2xl text-neutral-700 dark:text-neutral-200 -mt-4">
-              {courseData.category}
+              {courseData?.category}
             </p>
-            <p>{`${courseData.startYear} - ${courseData.endYear}`}</p>
+            <p>{`${courseData?.startYear} - ${courseData?.endYear}`}</p>
 
             <div
               className="
