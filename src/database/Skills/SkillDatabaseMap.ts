@@ -813,9 +813,9 @@ const skillDatabaseMap: Database<SkillInterface> = {
     skillType: SkillTypesEnum.Technical,
     relatedSkills: [
       SkillDatabaseKeys.Mathematics,
-      SkillDatabaseKeys.Algorithms,
+      SkillDatabaseKeys.Algebra,
       SkillDatabaseKeys.ProblemSolving,
-      SkillDatabaseKeys.DataEngineering,
+      SkillDatabaseKeys.Logics,
     ],
   },
   //^ Project Management

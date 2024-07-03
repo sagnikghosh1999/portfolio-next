@@ -39,7 +39,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
 
   return (
     <div
-      className="mb-4 md:mb-6
+      className="mb-4
         bg-neutral-100 dark:bg-neutral-950 
         p-4 
         rounded-xl 
