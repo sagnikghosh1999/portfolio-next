@@ -56,7 +56,44 @@ const projectMap: Database<ProjectInterface> = {
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.AirbnbClone),
     relatedMaterials: [],
   },
+  [ProjectDatabaseKeys.FacebookClone]: {
+    name: `Facebook Clone`,
+    description: `
+          Full Stack Facebook Clone with React JS, MongoDB, Express, Node JS, Image upload with Cloudinary
+          `,
+    repositoryURL: `https://github.com/sagnikghosh1999/facebook-clone-frontend`,
+    deploymentURL: `https://socialbook-frontend.vercel.app`,
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.ReactJS,
+      SkillDatabaseKeys.HTML,
+      SkillDatabaseKeys.CSS,
+      SkillDatabaseKeys.Cloudinary,
+      SkillDatabaseKeys.Redux,
+      SkillDatabaseKeys.UserAuthentication,
+      SkillDatabaseKeys.Axios,
 
+      SkillDatabaseKeys.NPM,
+      SkillDatabaseKeys.GitHub,
+      SkillDatabaseKeys.Git,
+      SkillDatabaseKeys.ESLint,
+      SkillDatabaseKeys.Prettier,
+
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.ProjectManagement,
+      SkillDatabaseKeys.CriticalThinking,
+      SkillDatabaseKeys.Creativity,
+      SkillDatabaseKeys.Adaptability,
+      SkillDatabaseKeys.TimeManagement,
+      SkillDatabaseKeys.ScopeManagement,
+      SkillDatabaseKeys.DesignPatterns,
+    ],
+    category: ProjectCategoriesEnum.FullStackWebDevelopment,
+    thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.FacebookClone),
+    relatedMaterials: [],
+  },
+
+  //Frontend project
   [ProjectDatabaseKeys.TeslaClone]: {
     name: `Tesla Clone`,
     description: `

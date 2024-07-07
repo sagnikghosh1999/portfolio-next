@@ -8,9 +8,10 @@
  */
 enum ProjectDatabaseKeys {
   //fullstack
-  TeslaClone = "tesla-clone",
-  //frontend
   AirbnbClone = "airbnb-clone",
+  FacebookClone = "facebook-clone",
+  //frontend
+  TeslaClone = "tesla-clone",
   TravelWebsite = "travel-website",
   ResumeBuilder = "resume-builder",
   MovieApp = "movie-app",
