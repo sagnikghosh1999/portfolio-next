@@ -6,6 +6,7 @@ import "./globals.css";
 
 //👇 Import Montserrat font
 import { Montserrat } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 //👇 Configure our font object
 const montserrat = Montserrat({
@@ -59,6 +60,7 @@ export default function RootLayoutWithProviders({
             </main>
           </Providers>
         </body>
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS || ""} />
       </html>
     </>
   );
