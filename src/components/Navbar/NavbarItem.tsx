@@ -7,6 +7,7 @@ import React from "react";
 
 interface NavbarItemProps {
   href: string;
+  label?: string;
   children: React.ReactNode;
 }
 
@@ -18,7 +19,7 @@ interface NavbarItemProps {
  * @param children The content to display inside the navbar item
  * @returns A navbar item component
  */
-const NavbarItem: React.FC<NavbarItemProps> = ({ href, children }) => {
+const NavbarItem: React.FC<NavbarItemProps> = ({ href, label, children }) => {
   const pathname: string = usePathname();
   const { isOpen: isOverlayOpen, close: closeOverlay } = useNavbarStore();
 
@@ -49,7 +50,14 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ href, children }) => {
   `;
 
   return (
-    <Link href={href} className={navbarItemStyle} onClick={() => handleClick()}>
+    <Link
+      href={href}
+      aria-label={
+        label === "More" ? "More pages not displayed in Navbar" : label
+      }
+      className={navbarItemStyle}
+      onClick={() => handleClick()}
+    >
       {children}
 
       {/* Hover Underline */}
