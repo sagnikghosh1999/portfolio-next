@@ -119,7 +119,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
 
             <Tooltip>
               <TooltipTrigger>
-                <Link href={`${basePath}/${projectKey}`}>
+                <Link
+                  href={`${basePath}/${projectKey}`}
+                  aria-label={`Project details of ${projectData.name}`}
+                >
                   <BsInfoCircle
                     size={30}
                     className="md:hover:-translate-y-1 transition-transform cursor-pointer"
@@ -135,7 +138,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
             {projectData.repositoryURL && (
               <Tooltip>
                 <TooltipTrigger>
-                  <Link href={projectData.repositoryURL} target="_blank">
+                  <Link
+                    href={projectData.repositoryURL}
+                    aria-label={`Github repository ${projectData.name}`}
+                    target="_blank"
+                  >
                     <BsGithub
                       size={30}
                       className="md:hover:-translate-y-1 transition-transform cursor-pointer"
@@ -151,7 +158,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
             {projectData.deploymentURL && (
               <Tooltip>
                 <TooltipTrigger>
-                  <Link href={projectData.deploymentURL} target="_blank">
+                  <Link
+                    href={projectData.deploymentURL}
+                    aria-label={`Live demo ${projectData.name}`}
+                    target="_blank"
+                  >
                     <BsArrowUpRightCircle
                       size={30}
                       className="md:hover:-translate-y-1 transition-transform cursor-pointer"

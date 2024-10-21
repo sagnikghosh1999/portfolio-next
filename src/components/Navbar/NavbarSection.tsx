@@ -32,14 +32,18 @@ const NavbarSection: React.FC<NavbarSectionProps> = ({ items }) => {
                 key={item.label}
                 className="flex justify-center w-full md:w-auto"
               >
-                <NavbarItem href={item.path}>{item.label}</NavbarItem>
+                <NavbarItem href={item.path} label={item.label}>
+                  {item.label}
+                </NavbarItem>
               </div>
             ) : (
               <div
                 key={item.label}
                 className="lg:flex justify-center w-full lg:w-auto hidden"
               >
-                <NavbarItem href={item.path}>{item.label}</NavbarItem>
+                <NavbarItem href={item.path} label={item.label}>
+                  {item.label}
+                </NavbarItem>
               </div>
             )
           )}

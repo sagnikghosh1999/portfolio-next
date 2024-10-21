@@ -55,6 +55,7 @@ const ThemeToggle: React.FC = () => {
           <button
             onClick={handleThemeChange}
             className={`${baseButtonClass} ${darkButtonClass}`}
+            aria-label="toggletheme to light"
           >
             <RiSunLine
               size={27}
@@ -65,6 +66,7 @@ const ThemeToggle: React.FC = () => {
           <button
             onClick={handleThemeChange}
             className={`${baseButtonClass} ${lightButtonClass}`}
+            aria-label="toggletheme to dark"
           >
             <RiMoonFill
               size={27}

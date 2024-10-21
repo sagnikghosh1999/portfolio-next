@@ -169,7 +169,7 @@ const projectMap: Database<ProjectInterface> = {
     ],
   },
   [ProjectDatabaseKeys.ResumeBuilder]: {
-    name: `Resume Builder Webste`,
+    name: `Resume Builder Website`,
     description: `
           This is a basic resume builder single page application built with ReactJs.
           `,
@@ -203,7 +203,7 @@ const projectMap: Database<ProjectInterface> = {
     relatedMaterials: [],
   },
   [ProjectDatabaseKeys.MovieApp]: {
-    name: `Movie Trailer Webste`,
+    name: `Movie Trailer Website`,
     description: `
           This is a basic movie trailer single page application built with ReactJs and TMDB API.
           `,
