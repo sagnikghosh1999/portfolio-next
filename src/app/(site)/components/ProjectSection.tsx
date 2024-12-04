@@ -21,9 +21,9 @@ const ProjectsSection = () => {
    * In other words, only these projects will be displayed on the home page.
    */
   const displayedProjects: string[] = [
+    ProjectDatabaseKeys.FacebookClone,
     ProjectDatabaseKeys.AirbnbClone,
-    ProjectDatabaseKeys.TeslaClone,
-    ProjectDatabaseKeys.TravelWebsite,
+    ProjectDatabaseKeys.MovieApp,
   ];
 
   return (
