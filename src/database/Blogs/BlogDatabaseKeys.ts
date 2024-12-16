@@ -7,12 +7,7 @@
  * @see {@link blogMap} at `database/blogs.ts`
  */
 enum BlogDatabaseKeys {
-  Backend = "backend",
-  Frontend = "front-end",
-  JavaScriptVsTypeScript = "javascript-vs-typescript",
-  SessionsVsTokens = "sessions-vs-tokens",
-  SQLNOSQL = "sql-vs-nosql-databases",
-  SyncAsync = "sync-vs-async",
+  JavaScriptStringMethods = "javascript-string-methods",
 }
 
 export default BlogDatabaseKeys;
