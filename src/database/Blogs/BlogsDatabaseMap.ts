@@ -12,7 +12,15 @@ import SkillCategoriesEnum from "@/enums/Skill/SkillCategoriesEnum";
  * The order of the blogs is the order that is used when displaying the blogs on the website.
  * The order of the skills is the order that is used when displaying the skills on the website.
  */
-const blogsMap: Database<BlogInterface> = {};
+const blogsMap: Database<BlogInterface> = {
+  [BlogDatabaseKeys.JavaScriptStringMethods]: {
+    name: "Mastering JavaScript String Methods: Practical Guide with Comparisons",
+    subtitle:
+      "Strings are an essential part of JavaScript development. Whether you’re building web applications, APIs, or simple scripts, strings are everywhere. To efficiently handle and manipulate strings, JavaScript provides a powerful set of methods. In this guide, we’ll explore these methods, compare their usage, and examine practical applications.",
+    category: BlogCategoriesEnum.SoftwareEngineering,
+    skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.JavaScript],
+  },
+};
 
 /**
  * List of keys for the blogs that can be used to uniquely identify the blogs.
