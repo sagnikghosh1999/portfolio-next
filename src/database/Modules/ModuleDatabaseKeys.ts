@@ -36,12 +36,21 @@ enum ModuleDatabaseKeys {
   NSEC_Mechanisms = "ME402",
   NSEC_ManufacturingProcesses = "ME403",
 
+  //5th semester
   NSEC_DynamicsOfMachines = "ME501",
   NSEC_HeatTransfer = "ME502",
+  NSEC_Principles_Practices_Management = "HU511",
   NSEC_DesignOfMachineElements = "ME503",
   NSEC_Metrology = "ME504",
   NSEC_AppliedFluidMechanics = "ME505B",
+
+  //6th semester
+  NSEC_ProductionOperationsManagement = "HU611",
   NSEC_ICEngines = "ME601",
+  NSEC_MachiningPrincipalsTools = "ME602",
+  NSEC_MachineDesign = "ME603",
+  NSEC_RAC = "ME604A",
+  NSEC_MaterialHandling = "ME605A",
 }
 
 export default ModuleDatabaseKeys;
