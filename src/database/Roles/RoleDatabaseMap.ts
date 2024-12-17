@@ -62,6 +62,7 @@ const rolesMap: Database<RoleInterface> = {
     endDate: "September 2022",
     skills: [
       SkillDatabaseKeys.Python,
+      SkillDatabaseKeys.JavaScript,
       SkillDatabaseKeys.Communication,
       SkillDatabaseKeys.Teamwork,
       SkillDatabaseKeys.ProblemSolving,

@@ -24,6 +24,15 @@ const Reader: React.FC<ReaderProps> = ({ content, size = "lg" }) => {
         dark:prose-invert
         prose-img:rounded-lg
         max-w-none
+      prose-pre:bg-gray-200 
+      prose-pre:dark:bg-gray-800 
+      prose-pre:text-gray-800 
+      prose-pre:dark:text-gray-200 
+        prose-thead:text-left
+        prose-table:overflow-x-auto
+        prose-pre:transition-all 
+        prose-pre:duration-500 
+        prose-pre:ease-in-out
       `}
     >
       {content && <Markdown>{content}</Markdown>}

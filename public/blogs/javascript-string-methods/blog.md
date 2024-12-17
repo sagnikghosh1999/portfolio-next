@@ -1,5 +1,7 @@
 <center>![Javascript string methods](/blogs/javascript-string-methods/image.png)</center>
 
+Strings are an essential part of JavaScript development. Whether you’re building web applications, APIs, or simple scripts, strings are everywhere. To efficiently handle and manipulate strings, JavaScript provides a powerful set of methods. In this guide, we’ll explore these methods, compare their usage, and examine practical applications.
+
 ---
 
 ## **What is a String in JavaScript?**
@@ -33,11 +35,13 @@ We’ll group related methods, compare their functionality, and provide practica
 
 #### **Methods: `slice()` vs `substring()` vs `substr()`**
 
+<div style="overflow-x:auto;">
 | Method        | Purpose                            | Supports Negative Index? | Arguments         | Notes                                 |
 | ------------- | ---------------------------------- | ------------------------ | ----------------- | ------------------------------------- |
 | `slice()`     | Extracts part of a string          | Yes                      | `(start, end)`    | More modern and flexible.             |
 | `substring()` | Extracts part of a string          | No                       | `(start, end)`    | Similar to `slice` but less flexible. |
 | `substr()`    | Extracts part of a string (length) | Yes                      | `(start, length)` | Deprecated in modern JavaScript.      |
+</div>
 
 #### **Use Case: Extracting Domain from URL**
 
@@ -53,10 +57,12 @@ console.log(url.substring(8)); // "example.com"
 
 #### **Methods: `replace()` vs `replaceAll()`**
 
+<div style="overflow-x:auto;">
 | Method         | Purpose             | Replaces All Matches? | Supports Regex? |
 | -------------- | ------------------- | --------------------- | --------------- |
 | `replace()`    | Replace first match | No                    | Yes             |
 | `replaceAll()` | Replace all matches | Yes                   | Yes             |
+</div>
 
 #### **Use Case: Clean Up Text**
 
@@ -72,10 +78,12 @@ console.log(text.replaceAll("Error:", "Warning:")); // "Warning: Warning: Someth
 
 #### **Methods: `toLowerCase()` vs `toUpperCase()`**
 
+<div style="overflow-x:auto;">
 | Method          | Purpose                      | Common Usage            |
 | --------------- | ---------------------------- | ----------------------- |
 | `toLowerCase()` | Converts string to lowercase | Case-insensitive search |
 | `toUpperCase()` | Converts string to uppercase | Display consistency     |
+</div>
 
 #### **Use Case: Standardize User Input**
 
@@ -90,11 +98,13 @@ console.log(email.toLowerCase()); // "user@example.com"
 
 #### **Methods: `trim()` vs `trimStart()` vs `trimEnd()`**
 
+<div style="overflow-x:auto;">
 | Method        | Purpose                   | Trims Whitespace From |
 | ------------- | ------------------------- | --------------------- |
 | `trim()`      | Trims from both ends      | Both start and end    |
 | `trimStart()` | Trims from the start only | Start                 |
 | `trimEnd()`   | Trims from the end only   | End                   |
+</div>
 
 #### **Use Case: Cleaning User Input**
 
@@ -111,10 +121,12 @@ console.log(userName.trimEnd()); // "   John Doe"
 
 #### **Methods: `split()` vs `join()`**
 
+<div style="overflow-x:auto;">
 | Method    | Purpose                            | Converts Between |
 | --------- | ---------------------------------- | ---------------- |
 | `split()` | Splits a string into an array      | String → Array   |
 | `join()`  | Joins array elements into a string | Array → String   |
+</div>
 
 #### **Use Case: CSV Parsing**
 
@@ -133,6 +145,7 @@ console.log(joined); // "apple & banana & cherry"
 
 #### **Methods: `indexOf()` vs `lastIndexOf()` vs `includes()` vs `startsWith()` vs `endsWith()`**
 
+<div style="overflow-x:auto;">
 | Method          | Purpose                                    | Returns | Checks            |
 | --------------- | ------------------------------------------ | ------- | ----------------- |
 | `indexOf()`     | Finds first occurrence of a substring      | Number  | First occurrence  |
@@ -140,6 +153,7 @@ console.log(joined); // "apple & banana & cherry"
 | `includes()`    | Checks if a string contains a substring    | Boolean | Anywhere in text  |
 | `startsWith()`  | Checks if a string starts with a substring | Boolean | Beginning of text |
 | `endsWith()`    | Checks if a string ends with a substring   | Boolean | End of text       |
+</div>
 
 #### **Use Case: Validate File Extensions**
 
@@ -154,10 +168,12 @@ console.log(fileName.endsWith(".pdf")); // true
 
 #### **Methods: `padStart()` vs `padEnd()`**
 
+<div style="overflow-x:auto;">
 | Method       | Purpose                   | Pads On |
 | ------------ | ------------------------- | ------- |
 | `padStart()` | Adds padding at the start | Start   |
 | `padEnd()`   | Adds padding at the end   | End     |
+</div>
 
 #### **Use Case: Formatting IDs**
 
@@ -173,9 +189,11 @@ console.log(id.padEnd(6, "0")); // "420000"
 
 #### **Method: `repeat()`**
 
+<div style="overflow-x:auto;">
 | Method     | Purpose                  | Use Case        |
 | ---------- | ------------------------ | --------------- |
 | `repeat()` | Repeats a string N times | Text generation |
+</div>
 
 #### **Use Case: Generating Patterns**
 

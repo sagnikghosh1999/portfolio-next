@@ -16,7 +16,8 @@ const blogsMap: Database<BlogInterface> = {
   [BlogDatabaseKeys.JavaScriptStringMethods]: {
     name: "Mastering JavaScript String Methods: Practical Guide with Comparisons",
     subtitle:
-      "Strings are an essential part of JavaScript development. Whether you’re building web applications, APIs, or simple scripts, strings are everywhere. To efficiently handle and manipulate strings, JavaScript provides a powerful set of methods. In this guide, we’ll explore these methods, compare their usage, and examine practical applications.",
+      "JavaScript string methods are essential for text manipulation. This blog explores key methods like slice() and replace(), with practical examples and use cases to enhance your development skills effectively.",
+
     category: BlogCategoriesEnum.SoftwareEngineering,
     skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.JavaScript],
   },

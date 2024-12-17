@@ -103,7 +103,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
           </Link>
 
           {/* Project Description */}
-          <p className="lg:text-xl md:text-xl text-left md:leading-6 lg:leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+          <p className="lg:text-xl md:text-xl text-left md:leading-6 lg:leading-7 mb-4 text-neutral-600 dark:text-neutral-400 line-clamp-4 md:line-clamp-3">
             {projectData.description}
           </p>
 
