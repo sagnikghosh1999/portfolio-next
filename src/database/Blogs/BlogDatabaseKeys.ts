@@ -8,6 +8,7 @@
  */
 enum BlogDatabaseKeys {
   JavaScriptStringMethods = "javascript-string-methods",
+  JavaScriptArrayMethods = "javascript-array-methods",
 }
 
 export default BlogDatabaseKeys;

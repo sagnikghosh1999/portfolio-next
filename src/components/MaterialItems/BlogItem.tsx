@@ -37,12 +37,12 @@ const BlogItem: React.FC<BlogItemProps> = ({ blogKey }) => {
             transform md:hover:scale-105
             transition-all duration-500 ease-in-out"
         >
-          <h2 className=" text-xl font-bold  mb-4 text-neutral-900 dark:text-neutral-100">
+          <h2 className=" text-xl font-bold  mb-4 text-neutral-900 dark:text-neutral-100 line-clamp-2">
             {blogData.name}
           </h2>
           <p
             className="
-        text-neutral-700 dark:text-neutral-300 md:line-clamp-3 line-clamp-4"
+        text-neutral-700 dark:text-neutral-300 line-clamp-4"
           >
             {blogData.subtitle}
           </p>
