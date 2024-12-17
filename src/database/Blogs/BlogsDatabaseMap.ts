@@ -21,6 +21,14 @@ const blogsMap: Database<BlogInterface> = {
     category: BlogCategoriesEnum.SoftwareEngineering,
     skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.JavaScript],
   },
+  [BlogDatabaseKeys.JavaScriptArrayMethods]: {
+    name: "Mastering JavaScript Array Methods: A Complete Guide",
+    subtitle:
+      "JavaScript arrays are one of the most versatile and commonly used data structures. With the help of array methods, developers can efficiently manipulate and transform data to build complex applications. This blog explores the most important array methods, their practical uses, and comparisons to help you become a JavaScript array expert.",
+
+    category: BlogCategoriesEnum.SoftwareEngineering,
+    skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.JavaScript],
+  },
 };
 
 /**
