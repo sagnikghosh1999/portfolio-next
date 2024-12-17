@@ -42,7 +42,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ blogKey }) => {
           </h2>
           <p
             className="
-        text-neutral-700 dark:text-neutral-300"
+        text-neutral-700 dark:text-neutral-300 md:line-clamp-3 line-clamp-4"
           >
             {blogData.subtitle}
           </p>
