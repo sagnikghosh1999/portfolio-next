@@ -8,7 +8,7 @@ import developerName from "@/constants/developerName";
 import subtitles from "@/constants/subtitles";
 import useIsMounted from "@/hooks/useIsMounted";
 import Image from "next/image";
-import { HiArrowDown } from "react-icons/hi";
+import { HiChevronDown } from "react-icons/hi";
 
 /**
  * Hero section component shown at the top of the page.
@@ -141,7 +141,7 @@ const HeroSection = () => {
         className="
         flex flex-row 
         items-center text-center justify-center 
-        my-10 md:my-4 md:mt-20
+        my-10 md:my-6 md:mt-10
       "
       >
         <div
@@ -149,7 +149,7 @@ const HeroSection = () => {
             scrollToSection("about");
           }}
         >
-          <HiArrowDown
+          <HiChevronDown
             size={35}
             className="animate-bounce slow-bounce cursor-pointer"
           />
