@@ -20,8 +20,6 @@
 
 <center>![Javascript string methods](/blogs/javascript-string-methods/image.png)</center>
 
----
-
 ## **What is a String in JavaScript?**
 
 A string in JavaScript is a sequence of characters used to represent text. Strings can be created using single quotes (`'`), double quotes (`"`), or template literals (`` ` ``):

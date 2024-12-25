@@ -135,7 +135,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
    * @param blogContent Markdown blog that needs to be split into contents and article sections
    * @returns 2 sections: contents list and articles
    */
-
+  /*
   function splitBlogContent(blogContent: string): {
     contentsSection: string;
     articleSection: string;
@@ -163,7 +163,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   }
 
   const splitBlog = splitBlogContent(blogContent);
-
+*/
   return (
     <main>
       <div className="sr-only">
@@ -184,8 +184,8 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
             {blogData?.subtitle}
           </h2>
         </div>
-        <ContentsSection contentSection={splitBlog.contentsSection} />
-        <Reader content={splitBlog.articleSection} size="lg:prose-lg" />
+        {/* <ContentsSection contentSection={splitBlog.contentsSection} /> */}
+        <Reader content={blogContent} size="lg:prose-lg" />
 
         <div className="border-b border-gray-200 dark:border-neutral-600 pb-2" />
 
