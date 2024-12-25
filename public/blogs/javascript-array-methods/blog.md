@@ -1,6 +1,22 @@
-<center>![Javascript string methods](/blogs/javascript-array-methods/image.png)</center>
+- [**What is an Array in JavaScript?**](#what-is-an-array-in-javascript)
+- [**Why Are Array Methods Important?**](#why-are-array-methods-important)
+- [**Most Important JavaScript Array Methods**](#most-important-javascript-array-methods)
+  - [**1. Adding or Removing Elements**](#1-adding-or-removing-elements)
+  - [**2. Transforming Arrays**](#2-transforming-arrays)
+  - [**3. Searching for Elements**](#3-searching-for-elements)
+  - [**4. Checking Conditions**](#4-checking-conditions)
+  - [**5. Sorting and Reversing**](#5-sorting-and-reversing)
+  - [**6. Iterating Over Arrays**](#6-iterating-over-arrays)
+  - [**7. Combining and Slicing**](#7-combining-and-slicing)
+- [**Real-World Applications**](#real-world-applications)
+  - [**1. Data Transformation**](#1-data-transformation)
+  - [**2. Filtering Data**](#2-filtering-data)
+  - [**3. Aggregating Data**](#3-aggregating-data)
+- [**Best Practices**](#best-practices)
 
 ---
+
+<center>![Javascript string methods](/blogs/javascript-array-methods/image.png)</center>
 
 ## **What is an Array in JavaScript?**
 

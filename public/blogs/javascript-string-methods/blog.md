@@ -1,6 +1,24 @@
-<center>![Javascript string methods](/blogs/javascript-string-methods/image.png)</center>
+- [**What is a String in JavaScript?**](#what-is-a-string-in-javascript)
+- [**Why Are String Methods Important?**](#why-are-string-methods-important)
+- [**Top JavaScript String Methods with Comparisons**](#top-javascript-string-methods-with-comparisons)
+  - [**1. Extracting and Slicing Strings**](#1-extracting-and-slicing-strings)
+  - [**2. Replacing Text Dynamically**](#2-replacing-text-dynamically)
+  - [**3. Converting Case**](#3-converting-case)
+  - [**4. Cleaning Whitespace**](#4-cleaning-whitespace)
+  - [**5. Splitting and Joining Strings**](#5-splitting-and-joining-strings)
+  - [**6. Searching Substrings**](#6-searching-substrings)
+  - [**7. Formatting Strings**](#7-formatting-strings)
+  - [**8. Repeating Strings**](#8-repeating-strings)
+- [**Real-World Applications of String Methods**](#real-world-applications-of-string-methods)
+  - [**1. Form Validation**](#1-form-validation)
+  - [**2. Parsing CSV Data**](#2-parsing-csv-data)
+  - [**3. Dynamic Content Generation**](#3-dynamic-content-generation)
+- [**Best Practices for String Manipulation**](#best-practices-for-string-manipulation)
+- [**Conclusion**](#conclusion)
 
-Strings are an essential part of JavaScript development. Whether you’re building web applications, APIs, or simple scripts, strings are everywhere. To efficiently handle and manipulate strings, JavaScript provides a powerful set of methods. In this guide, we’ll explore these methods, compare their usage, and examine practical applications.
+---
+
+<center>![Javascript string methods](/blogs/javascript-string-methods/image.png)</center>
 
 ---
 

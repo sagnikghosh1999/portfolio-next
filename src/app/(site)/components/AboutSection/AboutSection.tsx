@@ -27,10 +27,10 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="home-section-wrapper">
-      <h1 className="text-center font-bold text-4xl">
+      <h2 className="text-center font-bold text-4xl">
         About Me
         <hr className="w-6 h-1 mx-auto my-4 bg-blue-500 border-0 rounded"></hr>
-      </h1>
+      </h2>
 
       <div
         className="
@@ -43,9 +43,9 @@ const AboutSection = () => {
       >
         {/* Left section */}
         <div className="lg:w-1/2">
-          <h1 className="text-center text-2xl font-bold mb-6 mt-6 md:text-left">
+          <h2 className="text-center text-2xl font-bold mb-6 mt-6 md:text-left">
             Get to know me!
-          </h1>
+          </h2>
 
           <div className="flex flex-col space-y-4">
             <Reader content={blogContent} />
