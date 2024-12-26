@@ -17,6 +17,9 @@ import SkillTypesEnum from "@/enums/Skill/SkillTypesEnum";
 import GroupedSkillsCategoriesInterface from "@/interfaces/skills/GroupedSkillsInterface";
 import type { Metadata, ResolvingMetadata } from "next";
 import ContentsSection from "./components/ContentsSection";
+import { Button } from "@/components/shadcn/ui/button";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import Link from "next/link";
 
 type BlogPageProps = {
   params: { blogKey: string };
@@ -180,7 +183,15 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
             {blogData?.subtitle}
           </h2>
         </div>
-        <ContentsSection contentSection={contentsSection} />
+        <div className="flex flex-col lg:flex-row justify-between mb-6 space-y-2">
+          <Button className="pl-3">
+            <Link href={BLOG_PAGE.path} className="w-full flex flex-row ">
+              <MdKeyboardArrowLeft size={24} className="mr-2" />
+              Back to Blogs
+            </Link>
+          </Button>
+          <ContentsSection contentSection={contentsSection} />
+        </div>
         <Reader
           content={blogContent.replace(contentsSection, "")}
           size="lg:prose-lg"
