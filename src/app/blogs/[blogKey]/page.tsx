@@ -128,42 +128,38 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   ];
 
   /**
-   * Splits a blog into 2 sections: contents and articles.
-   * The contents section is the part of the blog before the first heading.
-   * The article section is the part of the blog after the first heading.
+   * Splits the blogContent into 2 parts and returns the contentsSection
+   * The contents section is the part of the blog before the first separator.
    *
    * @param blogContent Markdown blog that needs to be split into contents and article sections
-   * @returns 2 sections: contents list and articles
+   * @returns the contents section
    */
-  /*
-  function splitBlogContent(blogContent: string): {
+
+  function getBlogContent(blogContent: string): {
     contentsSection: string;
-    articleSection: string;
   } {
-    // Regular expression to find the first heading (starting with #, ##, etc.)
+    // Regular expression to find the first separator ("---")
     const headingRegex = /^---$/m;
 
-    // Find the index of the first heading
+    // Find the index of the first separator
     const firstHeadingIndex: number = blogContent.search(headingRegex);
 
-    // If a heading is found, split the content
+    // If a heading is found, split the content into heading i.e. contentsSection
     if (firstHeadingIndex !== -1) {
       const contentsSection: string = blogContent
         .slice(0, firstHeadingIndex)
         .trim();
-      const articleSection: string = blogContent
-        .slice(firstHeadingIndex)
-        .trim();
 
-      return { contentsSection, articleSection };
+      return { contentsSection };
     }
 
-    // If no heading is found, return the entire content as the articleSection, and leave contentsSection empty
-    return { contentsSection: "", articleSection: blogContent.trim() };
+    // If no separator is found, return the contentsSection as empty string
+    return { contentsSection: "" };
   }
 
-  const splitBlog = splitBlogContent(blogContent);
-*/
+  // getting the table of contents section from the blogContent
+  const { contentsSection } = getBlogContent(blogContent);
+
   return (
     <main>
       <div className="sr-only">
@@ -184,8 +180,11 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
             {blogData?.subtitle}
           </h2>
         </div>
-        {/* <ContentsSection contentSection={splitBlog.contentsSection} /> */}
-        <Reader content={blogContent} size="lg:prose-lg" />
+        <ContentsSection contentSection={contentsSection} />
+        <Reader
+          content={blogContent.replace(contentsSection, "")}
+          size="lg:prose-lg"
+        />
 
         <div className="border-b border-gray-200 dark:border-neutral-600 pb-2" />
 
