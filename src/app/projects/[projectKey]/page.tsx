@@ -36,6 +36,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 import { BsArrowUpRightCircle, BsGithub, BsPlusCircle } from "react-icons/bs";
+import { GrAppsRounded } from "react-icons/gr";
+import { IoReaderOutline } from "react-icons/io5";
 
 /**
  * Generates the metadata for the project page.
@@ -202,6 +204,26 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
     `public${basePath}/${projectKey}/features.md`
   )?.content;
 
+  /**
+   * Get the blog content from the file system.
+   * This is used to display the features and blog sections.
+   */
+  const blog: string | undefined = getMarkdownFromFileSystem(
+    `public${basePath}/${projectKey}/blog.md`
+  )?.content;
+
+  /**
+   * Whether to show the links section.
+   * If there are no links (repository or deployment), the section is not shown.
+   */
+  const showLinks: boolean =
+    !!projectData.repositoryURL || !!projectData.deploymentURL;
+
+  const hasFeatures: boolean = !!features;
+  const hasBlog: boolean = !!blog;
+  const hasRelatedMaterials: boolean =
+    !!projectData.relatedMaterials && projectData.relatedMaterials.length > 0;
+
   return (
     <main>
       <div className="sr-only">
@@ -292,108 +314,151 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           </div>
 
           {/* Links Section */}
-          <div className="text-center md:text-left">
-            <HeadingThree title="Links" />
-            <div
-              className="
+          {showLinks && (
+            <div className="text-center md:text-left">
+              <HeadingThree title="Links" />
+              <div
+                className="
               mt-6 flex 
               flex-row 
               justify-center md:justify-start items-center 
               w-full md:w-1/3
               gap-2"
-            >
-              {/* GitHub Repo */}
-              {projectData?.repositoryURL && (
-                <Link
-                  href={projectData?.repositoryURL}
-                  target="_blank"
-                  className="w-full"
-                >
-                  <Button>
-                    <div
-                      className="
+              >
+                {/* GitHub Repo */}
+                {projectData?.repositoryURL && (
+                  <Link
+                    href={projectData?.repositoryURL}
+                    target="_blank"
+                    className="w-full"
+                  >
+                    <Button>
+                      <div
+                        className="
                         flex
                         justify-center md:justify-start
                         align-center
                         gap-4
                         w-full
                       "
-                    >
-                      <BsGithub size={26} />
-                      <p>Repository</p>
-                    </div>
-                  </Button>
-                </Link>
-              )}
-              {/* Website */}
-              {projectData?.deploymentURL && (
-                <Link
-                  href={projectData?.deploymentURL}
-                  target="_blank"
-                  className="w-full"
-                >
-                  <Button>
-                    <div
-                      className="
+                      >
+                        <BsGithub size={26} />
+                        <p>Repository</p>
+                      </div>
+                    </Button>
+                  </Link>
+                )}
+                {/* Website */}
+                {projectData?.deploymentURL && (
+                  <Link
+                    href={projectData?.deploymentURL}
+                    target="_blank"
+                    className="w-full"
+                  >
+                    <Button>
+                      <div
+                        className="
                         flex
                         justify-center md:justify-start
                         align-center
                         gap-4
                         w-full
                       "
-                    >
-                      <BsArrowUpRightCircle size={26} />
-                      <p>Deployment</p>
-                    </div>
-                  </Button>
-                </Link>
-              )}
+                      >
+                        <BsArrowUpRightCircle size={26} />
+                        <p>Deployment</p>
+                      </div>
+                    </Button>
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
-
-          {/* Divider */}
-          {!!features ||
-          (projectData.relatedMaterials &&
-            projectData.relatedMaterials.length > 0) ? (
-            <div className="pt-2 pb-3 border-b border-gray-200 dark:border-neutral-600" />
-          ) : (
-            <></>
           )}
 
-          {/* Features Section */}
-          {!!features && (
-            <>
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>
-                    <div className="flex items-center space-x-3">
-                      <BsPlusCircle size={26} className="text-neutral-500" />
-                      <p
-                        className="
+          {hasFeatures || hasBlog || hasRelatedMaterials ? (
+            <Accordion type="single" collapsible>
+              {/* Features Section */}
+              {hasFeatures && (
+                <>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>
+                      <div className="flex items-center space-x-3">
+                        <BsPlusCircle size={26} className="text-neutral-500" />
+                        <p
+                          className="
                           text-lg 
                           text-neutral-600 dark:text-neutral-400
                           font-semibold
                           "
-                      >
-                        Features
-                      </p>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-2">
-                    <Reader content={features} />
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </>
-          )}
+                        >
+                          Features
+                        </p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-2">
+                      <Reader content={features} />
+                    </AccordionContent>
+                  </AccordionItem>
+                </>
+              )}
 
-          {/* Related Materials Section */}
-          {projectData.relatedMaterials &&
-            projectData.relatedMaterials.length > 0 && (
-              <>
-                <MaterialList materialKeys={projectData.relatedMaterials} />
-              </>
-            )}
+              {/* Blog Section */}
+              {hasBlog && (
+                <>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger>
+                      <div className="flex items-center space-x-3">
+                        <IoReaderOutline
+                          size={26}
+                          className="text-neutral-500"
+                        />
+                        <p
+                          className="
+                          text-lg 
+                          text-neutral-600 dark:text-neutral-400
+                          font-semibold
+                          "
+                        >
+                          Reflection / Journey
+                        </p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-2">
+                      <Reader content={blog} />
+                    </AccordionContent>
+                  </AccordionItem>
+                </>
+              )}
+
+              {/* Related Materials Section */}
+              {hasRelatedMaterials && (
+                <>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger>
+                      <div className="flex items-center space-x-3">
+                        <GrAppsRounded size={25} className="text-neutral-500" />
+                        <p
+                          className="
+                          text-lg 
+                          text-neutral-600 dark:text-neutral-400
+                          font-semibold
+                          "
+                        >
+                          Related Material
+                        </p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-2 z-10">
+                      <MaterialList
+                        materialKeys={projectData.relatedMaterials!}
+                        isCollapsible={false}
+                      />
+                    </AccordionContent>
+                  </AccordionItem>
+                </>
+              )}
+            </Accordion>
+          ) : null}
         </div>
       </div>
     </main>
