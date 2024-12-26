@@ -18,7 +18,7 @@ import useIsMounted from "@/hooks/useIsMounted";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { IoReaderOutline } from "react-icons/io5";
 
-type TabbedReaderProps = {
+type ProjectReaderProps = {
   content: {
     features?: string;
     blog?: string;
@@ -36,7 +36,7 @@ type TabbedReaderProps = {
  * @param blog Blog to be rendered
  * @returns Rendered Markdown content in a tabbed view
  */
-const ProjectReader: React.FC<TabbedReaderProps> = ({ content }) => {
+const ProjectReader: React.FC<ProjectReaderProps> = ({ content }) => {
   const hasFeatures: boolean = !!content.features;
   const hasBlog: boolean = !!content.blog;
   const isMounted: boolean = useIsMounted();

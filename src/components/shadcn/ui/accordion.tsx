@@ -19,7 +19,7 @@ const AccordionItem = React.forwardRef<
         py-1 px-3 mt-3
         rounded-xl
         border
-        bg-white dark:bg-neutral-950
+        bg-neutral-50 dark:bg-neutral-950
         border-neutral-200 dark:border-neutral-800
         hover:border-neutral-300 dark:hover:border-neutral-700
         shadow-sm hover:shadow-md

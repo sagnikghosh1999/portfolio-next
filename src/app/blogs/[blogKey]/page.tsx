@@ -205,10 +205,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 
         {blogData.relatedMaterials && blogData.relatedMaterials.length > 0 && (
           <>
-            <MaterialList
-              materialKeys={blogData.relatedMaterials}
-              sectionName={blogData.name}
-            />
+            <MaterialList materialKeys={blogData.relatedMaterials} />
           </>
         )}
       </div>
