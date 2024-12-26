@@ -129,24 +129,50 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 
   /**
    * Splits a blog into 2 sections: contents and articles.
-   * The contents section is the part of the blog before the first heading.
-   * The article section is the part of the blog after the first heading.
+   * The contents section is the part of the blog before the first separator.
+   * The article section is the part of the blog after the first separator.
    *
    * @param blogContent Markdown blog that needs to be split into contents and article sections
    * @returns 2 sections: contents list and articles
    */
 
-  function splitBlogContent(blogContent: string): {
+  /*
+  function getBlogContent(blogContent: string): {
     contentsSection: string;
-    articleSection: string;
   } {
-    // Regular expression to find the first heading (starting with #, ##, etc.)
+    // Regular expression to find the first heading (starting with "---")
     const headingRegex = /^---$/m;
 
     // Find the index of the first heading
     const firstHeadingIndex: number = blogContent.search(headingRegex);
 
-    // If a heading is found, split the content
+    // If a heading is found, split the content into heading i.e. contentsSection
+    if (firstHeadingIndex !== -1) {
+      const contentsSection: string = blogContent
+        .slice(0, firstHeadingIndex)
+        .trim();
+
+      return { contentsSection };
+    }
+
+    // If no heading is found, return the contentsSection as empty string
+    return { contentsSection: "" };
+  }
+
+  // getting the table of contents section from the blogContent
+  const { contentsSection } = getBlogContent(blogContent);
+*/
+  function splitBlogContent(blogContent: string): {
+    contentsSection: string;
+    articleSection: string;
+  } {
+    // Regular expression to find the first heading (starting with "---")
+    const headingRegex = /^---$/m;
+
+    // Find the index of the first separator
+    const firstHeadingIndex: number = blogContent.search(headingRegex);
+
+    // If the first separator is found, split the content
     if (firstHeadingIndex !== -1) {
       const contentsSection: string = blogContent
         .slice(0, firstHeadingIndex)
@@ -158,7 +184,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
       return { contentsSection, articleSection };
     }
 
-    // If no heading is found, return the entire content as the articleSection, and leave contentsSection empty
+    // If no separator is found, return the entire content as the articleSection, and leave contentsSection empty
     return { contentsSection: "", articleSection: blogContent.trim() };
   }
 
