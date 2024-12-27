@@ -13,7 +13,6 @@ export interface MaterialTabsProps {
   materialKeys: string[];
   defaultTab?: MaterialTypeEnum;
   isCollapsible?: boolean;
-  sectionName?: string;
 }
 
 /**
@@ -27,14 +26,12 @@ export interface MaterialTabsProps {
  * @param materialKeys List of keys for the materials that need to be displayed
  * @param defaultTab The default tab to be displayed when the list is rendered
  * @param isCollapsible Whether the list should be collapsible or not
- * @param sectionName The name of the section that the materials are related to which is displayed in the accordion trigger
  * @returns A tabbed list of materials
  */
 const MaterialList: React.FC<MaterialTabsProps> = ({
   materialKeys,
   defaultTab,
   isCollapsible = true,
-  sectionName,
 }) => {
   return isCollapsible ? (
     <Accordion type="single" collapsible className="mt-16">
@@ -58,7 +55,7 @@ const MaterialList: React.FC<MaterialTabsProps> = ({
                     font-semibold
                     "
             >
-              {`List of material directly related to ${sectionName}`}
+              Related Materials
             </p>
           </div>
         </AccordionTrigger>

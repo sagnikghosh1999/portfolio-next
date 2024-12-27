@@ -19,7 +19,7 @@ import skillDatabaseMap from "@/database/Skills/SkillDatabaseMap";
 import ProjectDatabaseKeys from "@/database/Projects/ProjectDatabaseKeys";
 import SkillDatabaseKeys from "@/database/Skills/SkillDatabaseKeys";
 import SkillTypesEnum from "@/enums/Skill/SkillTypesEnum";
-import useFuseSearch from "@/hooks/useFuseSearch";
+import useFuseMaterialSearch from "@/hooks/useFuseSearch/useFuseMaterialSearch";
 import FilterCategory from "@/interfaces/filters/FilterCategory";
 import MaterialGroupInterface from "@/interfaces/material/MaterialGroupInterface";
 import ProjectInterface from "@/database/Projects/ProjectInterface";
@@ -81,7 +81,7 @@ const ProjectsView: React.FC = () => {
     "skills.relatedSkills.category",
   ];
 
-  let filteredProjectsSlugArray: ProjectDatabaseKeys[] = useFuseSearch(
+  let filteredProjectsSlugArray: ProjectDatabaseKeys[] = useFuseMaterialSearch(
     projectDatabaseMap,
     searchTerm,
     searchOptions
