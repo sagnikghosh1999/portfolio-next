@@ -12,6 +12,8 @@ export default function isSkillAssociatedWithMaterial(
   skillKey: SkillDatabaseKeys,
   materialsDatabase: Database<MaterialInterface>
 ): boolean {
+  // C is not associated with any material, so return false for it -- In future add blogs and remove this return
+  if (skillKey === SkillDatabaseKeys.C) return false;
   // Loop through the materialsMap
   for (const materialKey in materialsDatabase) {
     // Check if the current material's skills array includes the skillToCheck

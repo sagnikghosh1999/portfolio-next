@@ -8,6 +8,7 @@ import ProjectInterface from "@/database/Projects/ProjectInterface";
 import skillDatabaseMap from "../Skills/SkillDatabaseMap";
 import SkillCategoriesEnum from "@/enums/Skill/SkillCategoriesEnum";
 import ModuleDatabaseKeys from "@/database/Modules/ModuleDatabaseKeys";
+import ProjectTypeEnum from "@/enums/Project/ProjectTypeEnum";
 
 /**
  * Hashmap of projects with keys as {@link SkillDatabaseKeys} and values as {@link ProjectInterface}.
@@ -55,6 +56,7 @@ const projectMap: Database<ProjectInterface> = {
     category: ProjectCategoriesEnum.FullStackWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.AirbnbClone),
     relatedMaterials: [],
+    type: ProjectTypeEnum.Personal,
   },
   [ProjectDatabaseKeys.FacebookClone]: {
     name: `Facebook Clone`,
@@ -91,6 +93,7 @@ const projectMap: Database<ProjectInterface> = {
     category: ProjectCategoriesEnum.FullStackWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.FacebookClone),
     relatedMaterials: [],
+    type: ProjectTypeEnum.Personal,
   },
 
   //Frontend project
@@ -128,6 +131,7 @@ const projectMap: Database<ProjectInterface> = {
     category: ProjectCategoriesEnum.FrontEndWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.TeslaClone),
     relatedMaterials: [],
+    type: ProjectTypeEnum.Personal,
   },
 
   [ProjectDatabaseKeys.TravelWebsite]: {
@@ -167,6 +171,7 @@ const projectMap: Database<ProjectInterface> = {
     relatedMaterials: [
       // ModuleDatabaseKeys.NSEC_Chemistry
     ],
+    type: ProjectTypeEnum.Personal,
   },
   [ProjectDatabaseKeys.ResumeBuilder]: {
     name: `Resume Builder Website`,
@@ -201,6 +206,7 @@ const projectMap: Database<ProjectInterface> = {
     category: ProjectCategoriesEnum.FrontEndWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.ResumeBuilder),
     relatedMaterials: [],
+    type: ProjectTypeEnum.Personal,
   },
   [ProjectDatabaseKeys.MovieApp]: {
     name: `Movie Trailer Website`,
@@ -238,6 +244,7 @@ const projectMap: Database<ProjectInterface> = {
     category: ProjectCategoriesEnum.FrontEndWebDevelopment,
     thumbnailImage: addProjectThumbnail(ProjectDatabaseKeys.MovieApp),
     relatedMaterials: [],
+    type: ProjectTypeEnum.Personal,
   },
 };
 

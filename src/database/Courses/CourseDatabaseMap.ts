@@ -5,6 +5,7 @@ import ModuleDatabaseKeys from "@/database/Modules/ModuleDatabaseKeys";
 import CourseInterface from "@/database/Courses/CourseInterface";
 import aggregateRelatedMaterialsForCourses from "@/actions/material/course/aggregate/aggregateRelatedMaterialsForCourses";
 import moduleDatabaseMap from "../Modules/ModuleDatabaseMap";
+import { EDUCATION_PAGE } from "@/constants/pages";
 
 /**
  * Hashmap of the courses I have studied at university.
@@ -20,6 +21,8 @@ const courseMap: Database<CourseInterface> = {
     skills: [], // dynamically added from modules
     startYear: 2017,
     endYear: 2021,
+    certificate: `${EDUCATION_PAGE.path}/${CourseDatabaseKeys.NSEC_MechanicalEngineering}/certificate.jpg`,
+    logo: `${EDUCATION_PAGE.path}/${CourseDatabaseKeys.NSEC_MechanicalEngineering}/logo.png`,
     modules: [
       ModuleDatabaseKeys.NSEC_AppliedFluidMechanics,
       ModuleDatabaseKeys.NSEC_AppliedThemodynamics,
