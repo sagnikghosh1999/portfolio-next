@@ -50,13 +50,13 @@ export default function RootLayoutWithProviders({
               <div
                 className="
                   mx-auto max-w-3xl md:max-w-6xl
-                  min-h-[85vh]
-                  p-4
+                 min-h-[calc(100vh-4rem)]
+                  pt-4 px-4 lg:px-0
                 "
               >
                 {children}
-                <Footer />
               </div>
+              <Footer />
             </main>
           </Providers>
         </body>
