@@ -36,12 +36,13 @@ interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
   const basePath: string = PROJECTS_PAGE.path;
   const projectData: ProjectInterface = projectDatabaseMap[projectKey];
+  const linkStyle: string =
+    "md:hover:-translate-y-1 transition-transform cursor-pointer hover:shadow-lg rounded-full";
 
   return (
     <div
-      className="mb-4
-        bg-neutral-100 dark:bg-neutral-950 
-        p-4 
+      className="mb-2
+        bg-neutral-100 dark:bg-neutral-950 p-4
         rounded-xl 
         sm:bg-white sm:dark:bg-neutral-900 
         border border-neutral-200 dark:border-neutral-800 lg:border-0
@@ -92,15 +93,27 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectKey }) => {
               className="
                     flex flex-col
                     justify-center items-center md:items-start
-                    mb-6
+                    mb-2
                     text-3xl md:text-4xl font-bold text-center md:text-left 
                     md:hover:text-blue-800 md:dark:hover:text-blue-500
-                    transition-colors duration-700 ease-in-out
+                    transition-colors duration-500 ease-in-out
                   "
             >
               {projectData.name}
             </h1>
           </Link>
+
+          {/* Project Type */}
+          <p
+            className="
+              mb-2 
+              italic font-medium
+              text-blue-700 dark:text-blue-300
+              text-center lg:text-left
+            "
+          >
+            {projectData.type}
+          </p>
 
           {/* Project Description */}
           <p className="lg:text-xl md:text-xl text-left md:leading-6 lg:leading-7 mb-4 text-neutral-600 dark:text-neutral-400 line-clamp-4 md:line-clamp-3">

@@ -278,6 +278,17 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           )
         )}
 
+        {/* Project Type */}
+        <p
+          className="
+            py-4
+            text-blue-700 dark:text-blue-300
+            text-center text-lg
+          "
+        >
+          {`${projectData.type} Project`}
+        </p>
+
         {/* Metadata Section */}
         <div className="mt-4 space-y-12">
           {/* Description Section */}

@@ -14,6 +14,7 @@ import { Button } from "../shadcn/ui/button";
 import { ArchiveToggle } from "./ArchiveToggle";
 import FilterPopover from "./FilterPopover";
 import SearchFilter from "@/interfaces/filters/SearchFilter";
+import SidePanel from "../UI/SidePanel";
 
 interface FilterOverlayProps {
   filterCategories: FilterCategory[];
@@ -87,125 +88,72 @@ const FilterOverlay: React.FC<FilterOverlayProps> = ({
   });
 
   return (
-    <div
-      className={`
-        fixed 
-        flex flex-col 
-        top-0 right-0 
-        h-full 
-        pt-${NAVBAR_HEIGHT} md:px-2 md:pb-3
-        w-full md:w-[24rem]
-        z-20 
-        transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-all duration-700 ease-in-out 
-        bg-none 
-        `}
-    >
-      <div
-        className="
-          mt-auto 
-          h-full
-          w-full shadow-lg md:rounded-xl 
-          border
-          border-neutral-200 dark:border-neutral-800
-          bg-neutral-50 dark:bg-black 
-          transition-all duration-700 ease-in-out"
-      >
-        <div
-          className="
-            sticky top-0
-            z-10
-            bg-neutral-50 dark:bg-black
-            px-4 py-0
-            flex justify-between items-center
-            transition-all duration-700 ease-in-out
-            rounded-t-2xl
-          "
-        >
-          {/* Replace HeadingThree with your own heading component or HTML tag */}
-          <div className="-mb-6">
-            <HeadingThree title="Filters" />
-          </div>{" "}
-          <button onClick={toggle}>
-            <span className="sr-only">Close</span>
-            <IoClose
-              className="
-                h-7 w-7 
-                text-neutral-800 dark:text-neutral-400 
-                hover:text-blue-500 dark:hover:text-blue-500 
-                transition-colors duration-500 ease-in-out"
-              aria-hidden="true"
+    <SidePanel title="Filters" isOpen={isOpen} toggle={toggle}>
+      <div className="flex-1 overflow-y-auto px-4 py-4">
+        <p className="text-neutral-500 dark:text-neutral-400 text-sm md:text-base text-center md:text-left">
+          When applying filters, archived items are displayed automatically.
+        </p>
+
+        {/* Filter Options */}
+        <div className="space-y-3 mt-4 flex flex-col justify-center items-center">
+          {filterCategories.map((filterCategory, index) => (
+            <FilterPopover
+              key={index}
+              basePath={basePath}
+              selectedFilterCategory={filterCategory}
+              filterCategories={filterCategories}
+              archiveFilter={archiveFilter}
+              searchFilter={searchFilter}
             />
-          </button>
+          ))}
         </div>
 
-        <div className="px-4 py-4">
-          <p className="text-neutral-500 dark:text-neutral-400 text-sm md:text-base text-center md:text-left">
-            When applying filters, archived items are displayed automatically.
-          </p>
-
-          {/* Filter Options */}
-          <div className="space-y-3 mt-4 flex flex-col justify-center items-center">
-            {filterCategories.map((filterCategory, index) => (
-              <FilterPopover
-                key={index}
-                basePath={basePath}
-                selectedFilterCategory={filterCategory}
-                filterCategories={filterCategories}
-                archiveFilter={archiveFilter}
-                searchFilter={searchFilter}
-              />
-            ))}
-          </div>
-
-          {/* Buttons */}
-          <div
-            className="
-              pt-3 mt-5
-              flex flex-row
-              space-x-2
-              border-t border-neutral-300 dark:border-neutral-700
-            "
-          >
-            {/* Clear Button */}
+        {/* Buttons */}
+        <div
+          className="
+            pt-3 mt-5
+            flex flex-col
+            space-x-2
+            border-t border-neutral-300 dark:border-neutral-700
+          "
+        >
+          {/* Clear Button */}
+          <Link href={basePath} className="w-full" scroll={false}>
             <Button
               variant="default"
               disabled={!areFiltersApplied}
               className="
-                w-auto
-                px-6
-                flex justify-start 
-                bg-neutral-100 
-                border border-neutral-300 dark:border-neutral-700"
+              w-full
+              px-6
+              flex justify-start 
+              bg-neutral-100 
+              border border-neutral-300 dark:border-neutral-700"
             >
-              <Link href={basePath} className="w-full" scroll={false}>
-                <div className="flex items-center space-x-2">
-                  <AiOutlineClear
-                    fontSize={24}
-                    className="text-neutral-700 dark:text-neutral-200"
-                  />
-                  <span>Clear All</span>
-                </div>
-              </Link>
-            </Button>
-
-            {/* Archive Toggle */}
-            {archiveFilter.hasArchivedMaterials && (
-              <div className="w-full">
-                <div className="w-full -mt-1">
-                  <ArchiveToggle
-                    showArchived={archiveFilter.showArchived}
-                    filterProps={filterProps}
-                    basePath={basePath}
-                  />
-                </div>
+              <div className="flex items-center space-x-2">
+                <AiOutlineClear
+                  fontSize={24}
+                  className="text-neutral-700 dark:text-neutral-200"
+                />
+                <span>Clear All</span>
               </div>
-            )}
-          </div>
+            </Button>
+          </Link>
+
+          {/* Archive Toggle */}
+          {archiveFilter.hasArchivedMaterials && (
+            <div className="w-full">
+              <div className="w-full -mt-1">
+                <ArchiveToggle
+                  showArchived={archiveFilter.showArchived}
+                  filterProps={filterProps}
+                  basePath={basePath}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </SidePanel>
   );
 };
 
