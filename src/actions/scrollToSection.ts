@@ -1,3 +1,5 @@
+import { NAVBAR_HEIGHT } from "@/constants/navbar";
+
 /**
  * Allows the user to scroll to a specific section of the page.
  *
@@ -9,7 +11,7 @@ export default function scrollToSection(sectionName: string) {
   );
   if (element) {
     window.scrollTo({
-      top: element.offsetTop,
+      top: element.offsetTop - (NAVBAR_HEIGHT * 4 + 8),
       behavior: "smooth",
     });
   }

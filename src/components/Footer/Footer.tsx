@@ -13,10 +13,10 @@ const Footer = () => {
 
   return (
     <footer>
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 dark:bg-neutral-700 border-0"></hr>
+      <hr className="w-full h-0.5 mx-auto  mt-8 bg-neutral-200 dark:bg-neutral-700 border-0"></hr>
       <div
         className="
-          mx-auto 
+          mx-auto max-w-3xl md:max-w-7xl
           p-4 space-y-4 md:space-y-0
           flex flex-col md:flex-row 
           text-center text-neutral-900 
