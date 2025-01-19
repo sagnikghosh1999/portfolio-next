@@ -139,8 +139,8 @@ const projectMap: Database<ProjectInterface> = {
     description: `
           This is a basic landing page of some Travel website built with NextJS, ReactJs and TailwindCss
           `,
-    repositoryURL: `https://github.com/sagnikghosh1999/tesla-clone`,
-    deploymentURL: `https://tesla-clone-1999.vercel.app/`,
+    repositoryURL: `https://github.com/sagnikghosh1999/travel-website-landing-page`,
+    deploymentURL: `https://hilink-alpha.netlify.app`,
     skills: [
       SkillDatabaseKeys.JavaScript,
       SkillDatabaseKeys.NextJS,
