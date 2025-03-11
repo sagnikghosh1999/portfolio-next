@@ -9,6 +9,7 @@
 enum BlogDatabaseKeys {
   JavaScriptStringMethods = "javascript-string-methods",
   JavaScriptArrayMethods = "javascript-array-methods",
+  TypeScriptInterviewQuestions = "typescript-interview-questions",
 }
 
 export default BlogDatabaseKeys;

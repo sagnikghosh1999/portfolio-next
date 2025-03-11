@@ -5,6 +5,7 @@
 enum BlogCategoriesEnum {
   WebDevelopment = "Web Development",
   SoftwareEngineering = "Software Engineering",
+  InterviewPreparation = "Interview Preparation",
   Databases = "Databases",
   Other = "Other",
 }

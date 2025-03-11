@@ -29,6 +29,14 @@ const blogsMap: Database<BlogInterface> = {
     category: BlogCategoriesEnum.SoftwareEngineering,
     skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.JavaScript],
   },
+  [BlogDatabaseKeys.TypeScriptInterviewQuestions]: {
+    name: "TypeScript Interview Questions: Beginner to Intermediate Cheat Sheet",
+    subtitle:
+      "This blog post is your go-to cheat sheet for preparing TypeScript interviews. Whether you're a beginner or at an intermediate level, here is a curated practical questions, examples, and exercises to boost your confidence and technical skills. Perfect for developers transitioning from JavaScript or brushing up for a technical round. \n If you're preparing for a TypeScript interview or just want to brush up your knowledge, this cheat sheet has everything you need—from fundamental concepts to hands-on coding examples. Let's dive in!",
+
+    category: BlogCategoriesEnum.InterviewPreparation,
+    skills: [SkillDatabaseKeys.WebDevelopment, SkillDatabaseKeys.TypeScript],
+  },
 };
 
 /**
