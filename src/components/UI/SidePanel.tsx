@@ -90,7 +90,7 @@ const SidePanel: React.FC<SidePanelProps> = ({
       )}
     >
       <div className={overrideStyle}>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col mx-4 h-full">
           <div
             className="
               sticky top-0
