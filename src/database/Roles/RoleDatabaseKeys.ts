@@ -7,6 +7,7 @@
  * @see {@link roleMap} at `database/roles.ts`
  */
 enum RoleDatabaseKeys {
+  Associate = "associate",
   ProgrammerAnalystTrainee = "programmer-analyst-trainee",
   ProgrammerAnalyst = "programmer-analyst",
   Intern = "intern-trainee",
