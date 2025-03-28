@@ -21,16 +21,17 @@ enum SkillDatabaseKeys {
   REST = "rest-api",
   OpenAI = "open-ai",
   APIs = "apis",
+  SDKs = "sdks",
   // GraphQL = "graphql-api",
   // TRPC = "trpc-api",
   // SocketIO = "socket-io",
   // ReplicateAI = "replicate-ai",
-  // SDKs = "sdks",
 
   //^ Backend Web Development
   Firebase = "firebase",
   Auth0 = "auth0",
   ClerkAuth = "clerk-auth",
+  NodeJs = "node-js",
   NextAuth = "next-auth",
   Stripe = "stripe",
   ExpressJS = "express-js",
