@@ -8,6 +8,7 @@
  */
 enum CompanyDatabaseKeys {
   Cognizant = "cognizant",
+  ITCinfotech = "itc-infotech",
   DSP = "durgapur-steel-plant",
 }
 

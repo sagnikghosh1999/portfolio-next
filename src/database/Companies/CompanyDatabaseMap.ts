@@ -4,11 +4,19 @@ import CompanyInterface from "@/database/Companies/CompanyInterface";
 import CompanyDatabaseKeys from "./CompanyDatabaseKeys";
 
 const companiesMap: Database<CompanyInterface> = {
+  [CompanyDatabaseKeys.ITCinfotech]: {
+    name: "ITC Infotech",
+    location: "Kolkata, India",
+    website: "https://www.itcinfotech.com/",
+    positions: [RoleDatabaseKeys.AssociateITConsultant],
+    logo: addCompanyThumbnail(CompanyDatabaseKeys.ITCinfotech),
+  },
   [CompanyDatabaseKeys.Cognizant]: {
     name: "Cognizant Technology Solutions",
     location: "Kolkata, India",
     website: "https://www.cognizant.com/",
     positions: [
+      RoleDatabaseKeys.Associate,
       RoleDatabaseKeys.ProgrammerAnalyst,
       RoleDatabaseKeys.ProgrammerAnalystTrainee,
     ],
