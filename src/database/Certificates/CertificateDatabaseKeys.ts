@@ -10,6 +10,7 @@ enum CertificateDatabaseKeys {
   //^ Programming Languages
   HackerrankJavascriptBasic = "242ab0dcb035",
   HackerrankJavascriptIntermediate = "8fb04f20976f",
+  UdemyJavaScript = "UC-282ce4b5-467c-4042-8d05-f1bd12db7366",
 
   //^ Algorithms and Data Structures
 

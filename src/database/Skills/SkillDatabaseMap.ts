@@ -86,7 +86,6 @@ const skillDatabaseMap: Database<SkillInterface> = {
   },
   [SkillDatabaseKeys.Scala]: {
     name: "Scala",
-    isMainSkill: true,
     skillType: SkillTypesEnum.Technology,
     category: SkillCategoriesEnum.ProgrammingLanguages,
     relatedSkills: [
@@ -106,10 +105,41 @@ const skillDatabaseMap: Database<SkillInterface> = {
   },
   [SkillDatabaseKeys.C]: {
     name: "C",
-    isMainSkill: false,
     skillType: SkillTypesEnum.Technology,
     category: SkillCategoriesEnum.ProgrammingLanguages,
   },
+
+  //^ Bundlers
+  [SkillDatabaseKeys.Webpack]: {
+    name: "Webpack",
+    skillType: SkillTypesEnum.Technical,
+    category: SkillCategoriesEnum.Bundlers,
+  },
+
+  [SkillDatabaseKeys.Parcel]: {
+    name: "Parcel",
+    skillType: SkillTypesEnum.Technical,
+    category: SkillCategoriesEnum.Bundlers,
+  },
+  [SkillDatabaseKeys.Vite]: {
+    name: "Vite",
+    skillType: SkillTypesEnum.Technical,
+    category: SkillCategoriesEnum.Bundlers,
+  },
+
+  [SkillDatabaseKeys.ESbuild]: {
+    name: "ES Build",
+    skillType: SkillTypesEnum.Technical,
+    category: SkillCategoriesEnum.Bundlers,
+  },
+
+  //^ Transpilers
+  [SkillDatabaseKeys.Babel]: {
+    name: "Babel",
+    skillType: SkillTypesEnum.Technical,
+    category: SkillCategoriesEnum.Transpilers,
+  },
+
   //^ Full Stack Web Development
   [SkillDatabaseKeys.NextJS]: {
     name: "Next.js",

@@ -13,6 +13,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from "@/components/shadcn/ui/command";
 import {
   DropdownMenu,
@@ -269,7 +270,7 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
                               </span>
                               <BsChevronDown
                                 fontSize={16}
-                                className="text-neutral-700 dark:text-neutral-200 "
+                                className="text-neutral-700 dark:text-neutral-200"
                               />
                             </div>
                           </Button>
@@ -361,20 +362,22 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
                                   )}
                                   className="w-full"
                                 >
-                                  <CommandItem
-                                    key={filter.urlParamName}
-                                    value={filter.urlParamName}
-                                    className="w-full"
-                                  >
-                                    {!filter.selected ? (
-                                      <Check
-                                        className={cn(gap, "text-red-500")}
-                                      />
-                                    ) : (
-                                      <div className={gap}></div>
-                                    )}
-                                    {filter.entryName}
-                                  </CommandItem>
+                                  <CommandList>
+                                    <CommandItem
+                                      key={filter.urlParamName}
+                                      value={filter.urlParamName}
+                                      className="w-full"
+                                    >
+                                      {!filter.selected ? (
+                                        <Check
+                                          className={cn(gap, "text-blue-500")}
+                                        />
+                                      ) : (
+                                        <div className={gap}></div>
+                                      )}
+                                      {filter.entryName}
+                                    </CommandItem>
+                                  </CommandList>
                                 </Link>
                               ))}
                             </CommandGroup>
@@ -388,7 +391,7 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
                       <Button
                         variant="default"
                         disabled={!isAnyFilterApplied}
-                        className="w-full  flex justify-center items-center gap-4"
+                        className="w-full flex justify-center items-center gap-4"
                       >
                         <MdOutlineClear size={22} className="mt-0.5" />
                         <p className="">Clear</p>

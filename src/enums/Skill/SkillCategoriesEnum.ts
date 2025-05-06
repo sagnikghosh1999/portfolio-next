@@ -9,6 +9,8 @@ enum SkillCategoriesEnum {
   FullStackWebDevelopment = "Full-Stack Web Development",
   DatabaseManagement = "Database Management",
   DevOps = "DevOps",
+  Bundlers = "Bundlers",
+  Transpilers = "Transpilers",
   Testing = "Testing",
   ProjectManagers = "Project Managers",
   DataEngineering = "Data Engineering",

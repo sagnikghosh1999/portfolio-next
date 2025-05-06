@@ -17,6 +17,15 @@ enum SkillDatabaseKeys {
   ObjectOrientedProgramming = "oop",
   FunctionalProgramming = "fp",
 
+  //^Bundlers
+  Webpack = "webpack",
+  Parcel = "parcel",
+  Vite = "vite",
+  ESbuild = "esbuild",
+
+  //^Transpilers
+  Babel = "babel",
+
   //^ APIs
   REST = "rest-api",
   OpenAI = "open-ai",
