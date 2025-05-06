@@ -8,6 +8,7 @@
  */
 enum RoleDatabaseKeys {
   Associate = "associate",
+  AssociateITConsultant = "associate-it-consultant",
   ProgrammerAnalystTrainee = "programmer-analyst-trainee",
   ProgrammerAnalyst = "programmer-analyst",
   Intern = "intern-trainee",

@@ -15,6 +15,32 @@ import skillDatabaseMap from "../Skills/SkillDatabaseMap";
  */
 const certificateMap: Database<CertificateInterface> = {
   //^ Programming Languages
+  [CertificateDatabaseKeys.UdemyJavaScript]: {
+    name: "The Complete Javascript Course 2025: From Zero to Expert",
+    category: CertificateCategoriesEnum.ProgrammingLanguages,
+    issuer: CertificateIssuersEnum.Udemy,
+    certificateURL:
+      "https://www.udemy.com/certificate/UC-282ce4b5-467c-4042-8d05-f1bd12db7366",
+    skills: [
+      SkillDatabaseKeys.JavaScript,
+      SkillDatabaseKeys.WebDevelopment,
+      SkillDatabaseKeys.Parcel,
+      SkillDatabaseKeys.Babel,
+      SkillDatabaseKeys.ESbuild,
+      SkillDatabaseKeys.DesignPatterns,
+      SkillDatabaseKeys.ProblemSolving,
+      SkillDatabaseKeys.CriticalThinking,
+    ],
+    description: `
+      A comprehensive, project-based course that teaches modern JavaScript from scratch to advanced levels, covering ES6+, asynchronous programming, and real-world applications—ideal for beginners and aspiring web developers.`,
+    learningOutcomes: [
+      "Master modern JavaScript from fundamentals to advanced concepts, including ES6+ features.",
+      "Understand JavaScript's inner workings, such as the execution context, scope, and closures.",
+      "Develop problem-solving skills by applying concepts in practical scenarios and debugging code.",
+      "Build real-world web applications through hands-on projects and coding challenges.",
+      "Gain confidence to work as a developer, equipped with a solid foundation in JavaScript.",
+    ],
+  },
   [CertificateDatabaseKeys.HackerrankJavascriptBasic]: {
     name: "Hackerrank Javascript Basic",
     category: CertificateCategoriesEnum.ProgrammingLanguages,
@@ -165,6 +191,7 @@ const certificateMap: Database<CertificateInterface> = {
       "Ensure data quality and consistency across Azure data platforms.",
       "Implement security and data protection measures in Azure data solutions.",
     ],
+    archived: true,
   },
   [CertificateDatabaseKeys.AzureAdministratorAssociate]: {
     name: "Azure Administrator Associate",
@@ -190,6 +217,7 @@ const certificateMap: Database<CertificateInterface> = {
       "Deploy and manage Azure compute resources, including virtual machines.",
       "Secure and manage identities with Azure Active Directory.",
     ],
+    archived: true,
   },
   [CertificateDatabaseKeys.AzureAIFundamentals]: {
     name: "Azure AI Fundamentals",
@@ -238,6 +266,7 @@ const certificateMap: Database<CertificateInterface> = {
       "Explore machine learning workflows on the Databricks platform.",
       "Collaborate effectively on data science projects using Databricks.",
     ],
+    archived: true,
   },
   [CertificateDatabaseKeys.DatabricksLakehouseFundamentals]: {
     name: "Databricks Lakehouse Fundamentals",
@@ -263,6 +292,7 @@ const certificateMap: Database<CertificateInterface> = {
       "Explore machine learning workflows using Databricks Lakehouse.",
       "Develop skills for collaborative data processing and analysis.",
     ],
+    archived: true,
   },
   [CertificateDatabaseKeys.CognizantPysparkIntermediate]: {
     name: "Pyspark Intermediate Assesment",
@@ -286,6 +316,7 @@ const certificateMap: Database<CertificateInterface> = {
       "Machine Learning with PySpark MLlib: Overview of MLlib and its components.Building and evaluating machine learning models.Working with feature engineering and pipelines.",
       "Optimizing and Tuning Spark Applications: Understanding Spark job execution and the DAG (Directed Acyclic Graph). Tuning Spark configurations for performance optimization. Best practices for debugging and monitoring Spark applications.",
     ],
+    archived: true,
   },
   // Generative AI
   [CertificateDatabaseKeys.DatabricksGenAIFundamentals]: {
