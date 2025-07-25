@@ -7,6 +7,9 @@ import "./globals.css";
 //👇 Import Montserrat font
 import { Montserrat } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Metadata } from "next";
+import developerName from "@/constants/developerName";
+import { HOME_PAGE } from "@/constants/pages";
 
 //👇 Configure our font object
 const montserrat = Montserrat({
@@ -14,6 +17,19 @@ const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: developerName,
+  description: HOME_PAGE.description,
+  category: "Homepage",
+  manifest: "/manifest/manifest.json",
+  icons: ["/manifest/icon512_maskable.png", "/manifest/icon512.png"],
+  creator: developerName,
+  verification: {
+    google: "ARqYNTL2YDsHsr-i5Ac0Wr6fbX3rm08lkMnwLSoxL7s",
+  },
+};
+
 /**
  * Layout component which applies to all pages.
  * Contains:
