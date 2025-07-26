@@ -262,7 +262,7 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
                     <p className="whitespace-nowrap">Group by:</p>
                     <div className="flex-grow">
                       <DropdownMenu>
-                        <DropdownMenuTrigger className="w-full">
+                        <DropdownMenuTrigger asChild>
                           <Button variant="default" className="w-full">
                             <div className="flex items-center justify-between w-full">
                               <span className="text-left">
