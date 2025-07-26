@@ -135,8 +135,8 @@ const TechnologiesModal: React.FC = () => {
               </div>
 
               <DropdownMenu>
-                <DropdownMenuTrigger className="w-48">
-                  <Button variant="default" className="w-full">
+                <DropdownMenuTrigger asChild>
+                  <Button variant="default" className="w-48">
                     <div className="flex items-start justify-between space-x-2 w-full">
                       <span>{currentGroupedName}</span>
                       <BsChevronDown

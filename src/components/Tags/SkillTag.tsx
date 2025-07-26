@@ -48,7 +48,7 @@ const SkillTag: React.FC<TagProps> = ({ skillKey, hide }) => {
   // Render the skill tag with a link if there's associated material, otherwise just show the tag
   return hasMaterial ? (
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger asChild>
         <Link href={skillLink}>
           <Tag hasHover={true}>{skill.name}</Tag>
         </Link>

@@ -120,10 +120,12 @@ const LanguageModal: React.FC<LanguageTagWithModalProps> = ({
       <Dialog>
         <DialogTrigger>
           <Tooltip>
-            <TooltipTrigger>
-              <Tag onClick={shouldOpenModal ? handleOpenModal : undefined}>
-                {language.name}
-              </Tag>
+            <TooltipTrigger asChild>
+              <div>
+                <Tag onClick={shouldOpenModal ? handleOpenModal : undefined}>
+                  {language.name}
+                </Tag>
+              </div>
             </TooltipTrigger>
             <TooltipContent>
               <p>{`View technologies related to ${language.name}`}</p>
@@ -143,18 +145,16 @@ const LanguageModal: React.FC<LanguageTagWithModalProps> = ({
                   Group by:
                 </div>
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="w-48">
-                    <div className="w-full">
-                      <Button variant="default" className="w-48">
-                        <div className="flex items-start justify-between space-x-2 w-full">
-                          <span>{currentGroupedName}</span>
-                          <BsChevronDown
-                            fontSize={16}
-                            className="text-neutral-700 dark:text-neutral-200 mt-1"
-                          />
-                        </div>
-                      </Button>
-                    </div>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="default" className="w-48">
+                      <div className="flex items-start justify-between space-x-2 w-full">
+                        <span>{currentGroupedName}</span>
+                        <BsChevronDown
+                          fontSize={16}
+                          className="text-neutral-700 dark:text-neutral-200 mt-1"
+                        />
+                      </div>
+                    </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-48">
                     <DropdownMenuGroup className="w-full">
