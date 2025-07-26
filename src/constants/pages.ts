@@ -115,7 +115,7 @@ export const ABOUT_PAGE: NavigationItemInterface = {
  * This is where the user can navigate to all the pages on the website.
  */
 export const MORE_PAGE: NavigationItemInterface = {
-  label: "More",
+  label: "More Pages",
   path: "/more",
   description: `
     Page where you can navigate to all the pages on the website.
