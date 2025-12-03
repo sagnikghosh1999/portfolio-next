@@ -1,5 +1,5 @@
-I'm a **Full Stack Software Engineer** with 3.5+ years of experience building scalable, high-performant, and user-centric web applications using **React**, **Node.js**, **TypeScript**, **Prisma**, **SQL** and **MongoDB**. Proven ability to deliver end-to-end solutions — from **database design and API development** to **frontend architecture and optimization**. Committed to clean code, scalable architecture, automated testing, and leveraging AI tools to streamline development and accelerate delivery.
+I build scalable, high-performance web applications using **React**, **Next.js**, **Node.js**, **TypeScript**, and **Prisma**.
+With 4+ years of experience delivering production-ready systems across the stack, I specialize in crafting **clean architectures**, **efficient APIs**, and **fast, accessible user interfaces**.
 
-My professional journey is deeply rooted in a broad spectrum of technical fields, including **Software Engineering**, **Web Development**, **Frontend Development**, and **Backend Development**. Over the years, I have worked on numerous **projects** and obtained several **certifications** that demonstrate my expertise and commitment to these areas.
-
-Currently, I work as a **Full stack Software Engineer** at Cognizant Technology Solutions, where I apply my extensive skills to optimise and automate operational overheads. Additionally, I am actively involved in **volunteering** within the field, contributing my time and expertise to various initiatives.
+I’ve engineered automation platforms that cut operational effort by **70%**, optimized apps for **Core Web Vitals**, and shipped features in fast-paced, product-driven environments.
+Passionate about **performance, testing, automation, and developer experience**, I love turning ideas into reliable, user-focused products.

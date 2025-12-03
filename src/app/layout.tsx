@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   icons: ["/manifest/icon512_maskable.png", "/manifest/icon512.png"],
   creator: developerName,
   verification: {
-    google: "ARqYNTL2YDsHsr-i5Ac0Wr6fbX3rm08lkMnwLSoxL7s",
+    google: "knBnLJfnJ9GDYh2NmWlH7L3TrycOjakWOCwTXTuTCgY",
   },
 };
 
