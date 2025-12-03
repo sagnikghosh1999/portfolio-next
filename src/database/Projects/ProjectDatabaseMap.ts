@@ -7,7 +7,6 @@ import SkillTypesEnum from "@/enums/Skill/SkillTypesEnum";
 import ProjectInterface from "@/database/Projects/ProjectInterface";
 import skillDatabaseMap from "../Skills/SkillDatabaseMap";
 import SkillCategoriesEnum from "@/enums/Skill/SkillCategoriesEnum";
-import ModuleDatabaseKeys from "@/database/Modules/ModuleDatabaseKeys";
 import ProjectTypeEnum from "@/enums/Project/ProjectTypeEnum";
 
 /**
@@ -23,7 +22,7 @@ const projectMap: Database<ProjectInterface> = {
           Full Stack Airbnb Clone with Next.js 14, Tailwind-css, Prisma, MongoDB, Framer-motion, Login (Google and Github), Image upload with Cloudinary
           `,
     repositoryURL: `https://github.com/sagnikghosh1999/airbnb-trpc`,
-    deploymentURL: `https://nextbnb-three.vercel.app/`,
+    deploymentURL: `https://nextarbnb.netlify.app/`,
     skills: [
       SkillDatabaseKeys.TypeScript,
       SkillDatabaseKeys.JavaScript,
@@ -64,7 +63,7 @@ const projectMap: Database<ProjectInterface> = {
           Full Stack Facebook Clone with React JS, MongoDB, Express, Node JS, Image upload with Cloudinary
           `,
     repositoryURL: `https://github.com/sagnikghosh1999/facebook-clone-frontend`,
-    deploymentURL: `https://socialbook-frontend.vercel.app`,
+    deploymentURL: `https://msocialbook.netlify.app`,
     skills: [
       SkillDatabaseKeys.JavaScript,
       SkillDatabaseKeys.ReactJS,
@@ -103,7 +102,8 @@ const projectMap: Database<ProjectInterface> = {
           This is a basic landing page clone of the Tesla website built with NextJS, ReactJs and TailwindCss
           `,
     repositoryURL: `https://github.com/sagnikghosh1999/tesla-clone`,
-    deploymentURL: `https://tesla-clone-1999.vercel.app/`,
+    deploymentURL: `https://better-tesla.netlify.app/`,
+    archived: true,
     skills: [
       SkillDatabaseKeys.JavaScript,
       SkillDatabaseKeys.NextJS,
@@ -115,7 +115,6 @@ const projectMap: Database<ProjectInterface> = {
       SkillDatabaseKeys.NPM,
       SkillDatabaseKeys.ESLint,
       SkillDatabaseKeys.Prettier,
-
       SkillDatabaseKeys.ProblemSolving,
       SkillDatabaseKeys.ProjectManagement,
       SkillDatabaseKeys.CriticalThinking,

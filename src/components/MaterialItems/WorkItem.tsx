@@ -96,7 +96,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ roleKey }) => {
         <Link href={rolePage}>
           <h2
             className="               
-              text-3xl md:text-3xl font-bold  
+              text-2xl md:text-3xl font-semibold md:font-bold
               md:hover:text-blue-800 
               transition-colors duration-700 ease-in-out"
           >
@@ -107,7 +107,6 @@ const WorkItem: React.FC<WorkItemProps> = ({ roleKey }) => {
           className="
             flex flex-col md:flex-row
             space-x-0 md:space-x-4
-            text-lg 
             mb-2 
             text-neutral-500 dark:text-neutral-400
             items-center justify-center md:justify-start

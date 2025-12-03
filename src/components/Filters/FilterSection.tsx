@@ -123,16 +123,16 @@ const FilterSection: React.FC<FilterSectionProps> = ({
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 md:space-x-3">
               <MdOutlineManageSearch
                 size={28}
                 className="text-neutral-600 dark:text-neutral-400"
               />
               <p
                 className="
-                  text-lg 
-                  text-neutral-600 dark:text-neutral-400
-                  font-semibold
+                  md:text-lg 
+                  text-neutral-600 dark:text-neutral-400 
+                  font-medium md:font-semibold
                   "
               >
                 {message}
